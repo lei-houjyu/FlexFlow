@@ -405,6 +405,17 @@ bool Graph::has_edge(const Edge& e) const
   return true;
 }
 
+void Graph::print_in_edge() const {
+  for (const auto& it : inEdges) {
+    const std::unordered_set<Edge>& inList = it.second;
+    for (const auto& e : inList) {
+      printf("type(%s) guid(%zu) idx(%d) --> type(%s) guid(%zu) idx(%d)\n", 
+        optype_to_string(e.srcOp.ptr->op_type).c_str(), e.srcOp.guid, e.srcIdx,
+        optype_to_string(e.dstOp.ptr->op_type).c_str(), e.dstOp.guid, e.dstIdx);
+    }
+  }
+}
+
 void Graph::print(void) const
 {
   log_graph.print("Printing in-edge graph...");

@@ -1,0 +1,9 @@
+$FF_HOME/build/examples/cpp/AlexNet/alexnet -ll:gpu 1 -ll:fsize 6000 -ll:zsize 6000 --search-num-nodes 1 --search-num-workers 4 > alexnet.log 2>&1
+$FF_HOME/build/examples/cpp/candle_uno/candle_uno -ll:gpu 1 -ll:fsize 6000 -ll:zsize 6000 --search-num-nodes 1 --search-num-workers 4 > candle_uno.log 2>&1
+$FF_HOME/build/examples/cpp/DLRM/dlrm -ll:gpu 1 -ll:fsize 6000 -ll:zsize 6000 --search-num-nodes 1 --search-num-workers 4 > dlrm.log 2>&1
+$FF_HOME/build/examples/cpp/InceptionV3/inception -ll:gpu 1 -ll:fsize 6000 -ll:zsize 6000 --search-num-nodes 1 --search-num-workers 4 > inception.log 2>&1
+$FF_HOME/build/examples/cpp/MLP_Unify/mlp_unify -ll:gpu 1 -ll:fsize 6000 -ll:zsize 6000 --search-num-nodes 1 --search-num-workers 4 > mlp_unify.log 2>&1
+$FF_HOME/build/examples/cpp/ResNet/resnet -ll:gpu 1 -ll:fsize 6000 -ll:zsize 6000 --search-num-nodes 1 --search-num-workers 4 > resnet.log 2>&1
+$FF_HOME/build/examples/cpp/resnext50/resnext50 -ll:gpu 1 -ll:fsize 6000 -ll:zsize 6000 --search-num-nodes 1 --search-num-workers 4 > resnext50.log 2>&1
+$FF_HOME/build/examples/cpp/Transformer/transformer -ll:gpu 1 -ll:fsize 6000 -ll:zsize 6000 --search-num-nodes 1 --search-num-workers 4 > transformer.log 2>&1
+$FF_HOME/build/examples/cpp/XDL/xdl -ll:gpu 1 -ll:fsize 6000 -ll:zsize 6000 --search-num-nodes 1 --search-num-workers 4 > xdl.log 2>&1

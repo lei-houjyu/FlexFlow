@@ -232,6 +232,7 @@ public:
       bool only_data_parallel,
       std::unique_ptr<Graph>& best_graph,
       std::unordered_map<Node, MachineView>& optimal_views);
+  void print_cache();
 private:
   template <typename T>
   T generic_sequence_optimize(Graph const *graph,
@@ -273,6 +274,8 @@ private:
   template <typename T>
   T get_optimal_cost(std::unique_ptr<Graph> optimized) const;
 private:
+  int cache_hit;
+  int cache_miss;
   std::unordered_map<size_t, float> cached_optimized_graphs;
   std::vector<GraphXfer*> all_pcg_xfers;
   FFModel* model;

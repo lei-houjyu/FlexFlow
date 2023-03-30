@@ -269,6 +269,7 @@ public:
   void print(void) const;
   void print_dot() const;
   void print_dot(std::ostream &) const;
+  void print_in_edge() const;
 
   bool check_correctness(void);
   bool has_loop(void);

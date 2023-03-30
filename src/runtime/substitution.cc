@@ -1456,10 +1456,15 @@ std::vector<GraphXfer*> create_xfers(FFModel *model, sl::RuleCollection const &r
 
 
 GraphSearchHelper::GraphSearchHelper(FFModel *model) 
-  : model(model), config(model->config)
+  : model(model), config(model->config), cache_hit(0), cache_miss(0)
 { 
   this->logger = std::unique_ptr<RecursiveLogger>(new RecursiveLogger("gs"));
   generate_all_pcg_xfers();
+}
+
+void GraphSearchHelper::print_cache() {
+  printf("[Fine-grained Cache] size: %lu hit: %d miss: %d miss_ratio: %f\n",
+    cached_optimized_graphs.size(), cache_hit, cache_miss, (float)cache_miss / (cache_hit + cache_miss));
 }
 
 void GraphSearchHelper::load_graph_substitutions(std::vector<GraphXfer*> &xfers) const
@@ -1860,6 +1865,16 @@ size_t gs_dp_state_hash(Graph const *graph,
   hash_combine(key, sink_node.ptr);
   hash_combine(key, output_shape);
   hash_combine(key, input_shape);
+  graph->print_in_edge();
+  printf("sink_node %s\n", sink_node.to_string().c_str());
+  printf("output shape: \n");
+  if (output_shape.has_value()) {
+    output_shape.value().print();
+  }
+  printf("input shape: \n");
+  if (input_shape.has_value()) {
+    input_shape.value().print();
+  }
   return key;
 }
 

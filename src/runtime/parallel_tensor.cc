@@ -142,6 +142,13 @@ RecordFormatter ParallelTensorShape::as_dot() const {
   return r;
 }
 
+void ParallelTensorShape::print() const {
+  for (int i = 0; i < this->num_dims; i++) {
+    std::cout << this->dims[i].size << "/" << this->dims[i].degree << ",";
+  }
+  std::cout << std::endl;
+}
+
 std::unordered_map<int, int> ParallelTensorShape::get_mv_dim_to_tensor_dim_mapping() const {
   std::unordered_map<int, int> result;
   for (int i = 0; i < this->num_dims; i++) {
