@@ -1,0 +1,251 @@
+[0 - 7fa0d40c9000]    0.229455 {3}{DLRM}: batchSize(64) workersPerNodes(1) numNodes(1)
+[0 - 7fa0d40c9000]    0.229475 {3}{DLRM}: EmbeddingBagSize(1)
+[0 - 7fa0d40c9000]    0.229490 {3}{DLRM}: Embedding Vocab Sizes: 1000000 1000000 1000000 1000000
+[0 - 7fa0d40c9000]    0.229492 {3}{DLRM}: MLP Top: 64 64 2
+[0 - 7fa0d40c9000]    0.229494 {3}{DLRM}: MLP Bot: 4 64 64
+workSpaceSize (1024 MB)
+legion_axis = 0
+num_nodes = 1 num_gpus_per_node = 4
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Input) guid(5000015) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Input) guid(5000014) idx(0) --> type(Embedding) guid(5000007) idx(0)
+type(Input) guid(5000016) idx(0) --> type(Embedding) guid(5000008) idx(0)
+type(Input) guid(5000017) idx(0) --> type(Embedding) guid(5000009) idx(0)
+type(Input) guid(5000018) idx(0) --> type(Embedding) guid(5000010) idx(0)
+type(Embedding) guid(5000010) idx(0) --> type(Concat) guid(5000011) idx(4)
+type(Embedding) guid(5000009) idx(0) --> type(Concat) guid(5000011) idx(3)
+type(Embedding) guid(5000008) idx(0) --> type(Concat) guid(5000011) idx(2)
+type(Embedding) guid(5000007) idx(0) --> type(Concat) guid(5000011) idx(1)
+type(Linear) guid(5000006) idx(0) --> type(Concat) guid(5000011) idx(0)
+type(Concat) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Linear_5000013
+output shape: 
+input shape: 
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Concat) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Linear_5000013
+output shape: 
+input shape: 
+320/1,64/1,1/1,
+[0 - 7fa0d1ced000]    2.590557 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.594572 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.595391 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.596088 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.596531 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.597028 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.597258 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000006) idx(0) --> type(Concat) guid(5000011) idx(0)
+type(Embedding) guid(5000007) idx(0) --> type(Concat) guid(5000011) idx(1)
+type(Embedding) guid(5000008) idx(0) --> type(Concat) guid(5000011) idx(2)
+type(Embedding) guid(5000009) idx(0) --> type(Concat) guid(5000011) idx(3)
+type(Embedding) guid(5000010) idx(0) --> type(Concat) guid(5000011) idx(4)
+type(Input) guid(5000018) idx(0) --> type(Embedding) guid(5000010) idx(0)
+type(Input) guid(5000017) idx(0) --> type(Embedding) guid(5000009) idx(0)
+type(Input) guid(5000016) idx(0) --> type(Embedding) guid(5000008) idx(0)
+type(Input) guid(5000014) idx(0) --> type(Embedding) guid(5000007) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Input) guid(5000015) idx(0) --> type(Linear) guid(5000005) idx(0)
+sink_node Concat_5000011
+output shape: 
+320/1,64/1,1/1,
+input shape: 
+[Measure Embedding] name(Embedding_1000007_2000007) forward_time(0.0042) backward_time(0.0065)
+[Measure Concat] name(Concat_1000011_2000011) forward_time(0.0198) backward_time(0.0197)
+[0 - 7fa0d1ced000]    2.608460 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Concat) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Linear_5000013
+output shape: 
+input shape: 
+320/2,64/1,1/1,
+[0 - 7fa0d1ced000]    2.628994 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.629859 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.630516 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.631080 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.631500 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.632007 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.632278 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000006) idx(0) --> type(Concat) guid(5000011) idx(0)
+type(Embedding) guid(5000007) idx(0) --> type(Concat) guid(5000011) idx(1)
+type(Embedding) guid(5000008) idx(0) --> type(Concat) guid(5000011) idx(2)
+type(Embedding) guid(5000009) idx(0) --> type(Concat) guid(5000011) idx(3)
+type(Embedding) guid(5000010) idx(0) --> type(Concat) guid(5000011) idx(4)
+type(Input) guid(5000018) idx(0) --> type(Embedding) guid(5000010) idx(0)
+type(Input) guid(5000017) idx(0) --> type(Embedding) guid(5000009) idx(0)
+type(Input) guid(5000016) idx(0) --> type(Embedding) guid(5000008) idx(0)
+type(Input) guid(5000014) idx(0) --> type(Embedding) guid(5000007) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Input) guid(5000015) idx(0) --> type(Linear) guid(5000005) idx(0)
+sink_node Concat_5000011
+output shape: 
+320/2,64/1,1/1,
+input shape: 
+[0 - 7fa0d1ced000]    2.633215 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Concat) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Linear_5000013
+output shape: 
+input shape: 
+320/4,64/1,1/1,
+[0 - 7fa0d1ced000]    2.634922 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.635803 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.636471 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.637038 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.637426 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.637909 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.638171 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000006) idx(0) --> type(Concat) guid(5000011) idx(0)
+type(Embedding) guid(5000007) idx(0) --> type(Concat) guid(5000011) idx(1)
+type(Embedding) guid(5000008) idx(0) --> type(Concat) guid(5000011) idx(2)
+type(Embedding) guid(5000009) idx(0) --> type(Concat) guid(5000011) idx(3)
+type(Embedding) guid(5000010) idx(0) --> type(Concat) guid(5000011) idx(4)
+type(Input) guid(5000018) idx(0) --> type(Embedding) guid(5000010) idx(0)
+type(Input) guid(5000017) idx(0) --> type(Embedding) guid(5000009) idx(0)
+type(Input) guid(5000016) idx(0) --> type(Embedding) guid(5000008) idx(0)
+type(Input) guid(5000014) idx(0) --> type(Embedding) guid(5000007) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Input) guid(5000015) idx(0) --> type(Linear) guid(5000005) idx(0)
+sink_node Concat_5000011
+output shape: 
+320/4,64/1,1/1,
+input shape: 
+[0 - 7fa0d1ced000]    2.639143 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Concat) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Linear_5000013
+output shape: 
+input shape: 
+320/1,64/2,1/1,
+[0 - 7fa0d1ced000]    2.640932 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.641853 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.642501 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.642827 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.643164 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000006) idx(0) --> type(Concat) guid(5000011) idx(0)
+type(Embedding) guid(5000007) idx(0) --> type(Concat) guid(5000011) idx(1)
+type(Embedding) guid(5000008) idx(0) --> type(Concat) guid(5000011) idx(2)
+type(Embedding) guid(5000009) idx(0) --> type(Concat) guid(5000011) idx(3)
+type(Embedding) guid(5000010) idx(0) --> type(Concat) guid(5000011) idx(4)
+type(Input) guid(5000018) idx(0) --> type(Embedding) guid(5000010) idx(0)
+type(Input) guid(5000017) idx(0) --> type(Embedding) guid(5000009) idx(0)
+type(Input) guid(5000016) idx(0) --> type(Embedding) guid(5000008) idx(0)
+type(Input) guid(5000014) idx(0) --> type(Embedding) guid(5000007) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Input) guid(5000015) idx(0) --> type(Linear) guid(5000005) idx(0)
+sink_node Concat_5000011
+output shape: 
+320/1,64/2,1/1,
+input shape: 
+[0 - 7fa0d1ced000]    2.644514 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Concat) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Linear_5000013
+output shape: 
+input shape: 
+320/2,64/2,1/1,
+[0 - 7fa0d1ced000]    2.646217 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000006) idx(0) --> type(Concat) guid(5000011) idx(0)
+type(Embedding) guid(5000007) idx(0) --> type(Concat) guid(5000011) idx(1)
+type(Embedding) guid(5000008) idx(0) --> type(Concat) guid(5000011) idx(2)
+type(Embedding) guid(5000009) idx(0) --> type(Concat) guid(5000011) idx(3)
+type(Embedding) guid(5000010) idx(0) --> type(Concat) guid(5000011) idx(4)
+type(Input) guid(5000018) idx(0) --> type(Embedding) guid(5000010) idx(0)
+type(Input) guid(5000017) idx(0) --> type(Embedding) guid(5000009) idx(0)
+type(Input) guid(5000016) idx(0) --> type(Embedding) guid(5000008) idx(0)
+type(Input) guid(5000014) idx(0) --> type(Embedding) guid(5000007) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Input) guid(5000015) idx(0) --> type(Linear) guid(5000005) idx(0)
+sink_node Concat_5000011
+output shape: 
+320/2,64/2,1/1,
+input shape: 
+[0 - 7fa0d1ced000]    2.647567 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Concat) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Linear_5000013
+output shape: 
+input shape: 
+320/1,64/4,1/1,
+[0 - 7fa0d1ced000]    2.648685 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.649584 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.650324 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.650751 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.651048 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000006) idx(0) --> type(Concat) guid(5000011) idx(0)
+type(Embedding) guid(5000007) idx(0) --> type(Concat) guid(5000011) idx(1)
+type(Embedding) guid(5000008) idx(0) --> type(Concat) guid(5000011) idx(2)
+type(Embedding) guid(5000009) idx(0) --> type(Concat) guid(5000011) idx(3)
+type(Embedding) guid(5000010) idx(0) --> type(Concat) guid(5000011) idx(4)
+type(Input) guid(5000018) idx(0) --> type(Embedding) guid(5000010) idx(0)
+type(Input) guid(5000017) idx(0) --> type(Embedding) guid(5000009) idx(0)
+type(Input) guid(5000016) idx(0) --> type(Embedding) guid(5000008) idx(0)
+type(Input) guid(5000014) idx(0) --> type(Embedding) guid(5000007) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Input) guid(5000015) idx(0) --> type(Linear) guid(5000005) idx(0)
+sink_node Concat_5000011
+output shape: 
+320/1,64/4,1/1,
+input shape: 
+[0 - 7fa0d1ced000]    2.652225 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Concat) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Linear_5000013
+output shape: 
+input shape: 
+320/1,64/1,1/1,
+[0 - 7fa0d1ced000]    2.653841 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.654340 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.654750 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.655123 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.655401 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.655714 {4}{xfers}: Considering 98 possible xfers
+[0 - 7fa0d1ced000]    2.655895 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000006) idx(0) --> type(Concat) guid(5000011) idx(0)
+type(Embedding) guid(5000007) idx(0) --> type(Concat) guid(5000011) idx(1)
+type(Embedding) guid(5000008) idx(0) --> type(Concat) guid(5000011) idx(2)
+type(Embedding) guid(5000009) idx(0) --> type(Concat) guid(5000011) idx(3)
+type(Embedding) guid(5000010) idx(0) --> type(Concat) guid(5000011) idx(4)
+type(Input) guid(5000018) idx(0) --> type(Embedding) guid(5000010) idx(0)
+type(Input) guid(5000017) idx(0) --> type(Embedding) guid(5000009) idx(0)
+type(Input) guid(5000016) idx(0) --> type(Embedding) guid(5000008) idx(0)
+type(Input) guid(5000014) idx(0) --> type(Embedding) guid(5000007) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Input) guid(5000015) idx(0) --> type(Linear) guid(5000005) idx(0)
+sink_node Concat_5000011
+output shape: 
+320/1,64/1,1/1,
+input shape: 
+[0 - 7fa0d1ced000]    2.656751 {4}{xfers}: Considering 98 possible xfers
+Optimal cost: 0.187892
+digraph taskgraph {
+  node0 [label="{ Embedding_5000007 | 5000007 | { 1 } | { 3 } }",shape=record];
+  node1 -> node0;
+  node2 [label="{ Concat_5000011 | 5000011 | { 1 } | { 0 } }",shape=record];
+  node3 -> node2;
+  node0 -> node2;
+  node4 -> node2;
+  node5 -> node2;
+  node6 -> node2;
+  node7 [label=Input_5000003];
+  node1 [label=Input_5000000];
+  node8 [label=Input_5000001];
+  node9 [label="{ Partition_5000833 | 5000833 | { 1 | 2 } | { 0 | 1 } }",shape=record];
+  node10 -> node9;
+  node11 [label=Input_5000004];
+  node12 [label=Input_5000002];
+  node13 [label="{ Linear_5000834 | 5000834 | { 2 } | { 0 | 1 } }",shape=record];
+  node9 -> node13;
+  node5 [label="{ Embedding_5000009 | 5000009 | { 1 } | { 1 } }",shape=record];
+  node12 -> node5;
+  node4 [label="{ Embedding_5000008 | 5000008 | { 1 } | { 2 } }",shape=record];
+  node8 -> node4;
+  node10 [label="{ Linear_5000012 | 5000012 | { 1 } | { 0 } }",shape=record];
+  node2 -> node10;
+  node14 [label="{ Linear_5000005 | 5000005 | { 1 } | { 0 } }",shape=record];
+  node11 -> node14;
+  node3 [label="{ Linear_5000006 | 5000006 | { 1 } | { 0 } }",shape=record];
+  node14 -> node3;
+  node6 [label="{ Embedding_5000010 | 5000010 | { 1 } | { 1 } }",shape=record];
+  node7 -> node6;
+}dlrm: /mnt/FlexFlow/src/mapper/mapper.cc:479: virtual void FlexFlow::FFMapper::slice_task(Legion::Mapping::MapperContext, const Legion::Task&, const Legion::Mapping::Mapper::SliceTaskInput&, Legion::Mapping::Mapper::SliceTaskOutput&): Assertion `(size_t)idx < devices->size()' failed.

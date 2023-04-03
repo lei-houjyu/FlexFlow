@@ -1,0 +1,929 @@
+[0 - 7f8bb4d55000]    0.234168 {3}{Candle_Uno}: batchSize(64) workersPerNodes(1) numNodes(1)
+[0 - 7f8bb4d55000]    0.234235 {3}{Candle_Uno}: Dense Layers: 4192 4192 4192 4192
+[0 - 7f8bb4d55000]    0.234246 {3}{Candle_Uno}: Dense Feature Layers: 4192 4192 4192 4192 4192 4192 4192 4192
+workSpaceSize (1024 MB)
+legion_axis = 0
+num_nodes = 1 num_gpus_per_node = 4
+type(Linear) guid(5000051) idx(0) --> type(Linear) guid(5000052) idx(0)
+type(Linear) guid(5000050) idx(0) --> type(Linear) guid(5000051) idx(0)
+type(Linear) guid(5000049) idx(0) --> type(Linear) guid(5000050) idx(0)
+type(Linear) guid(5000048) idx(0) --> type(Linear) guid(5000049) idx(0)
+type(Concat) guid(5000047) idx(0) --> type(Linear) guid(5000048) idx(0)
+type(Input) guid(5000058) idx(0) --> type(Concat) guid(5000047) idx(2)
+type(Linear) guid(5000046) idx(0) --> type(Concat) guid(5000047) idx(6)
+type(Linear) guid(5000037) idx(0) --> type(Concat) guid(5000047) idx(5)
+type(Input) guid(5000056) idx(0) --> type(Concat) guid(5000047) idx(1)
+type(Linear) guid(5000028) idx(0) --> type(Concat) guid(5000047) idx(4)
+type(Linear) guid(5000019) idx(0) --> type(Concat) guid(5000047) idx(3)
+type(Linear) guid(5000008) idx(0) --> type(Concat) guid(5000047) idx(0)
+type(Linear) guid(5000045) idx(0) --> type(Linear) guid(5000046) idx(0)
+type(Linear) guid(5000044) idx(0) --> type(Linear) guid(5000045) idx(0)
+type(Linear) guid(5000043) idx(0) --> type(Linear) guid(5000044) idx(0)
+type(Linear) guid(5000042) idx(0) --> type(Linear) guid(5000043) idx(0)
+type(Linear) guid(5000041) idx(0) --> type(Linear) guid(5000042) idx(0)
+type(Linear) guid(5000040) idx(0) --> type(Linear) guid(5000041) idx(0)
+type(Linear) guid(5000039) idx(0) --> type(Linear) guid(5000040) idx(0)
+type(Input) guid(5000057) idx(0) --> type(Linear) guid(5000039) idx(0)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(Linear) guid(5000034) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(Linear) guid(5000031) idx(0)
+type(Input) guid(5000059) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000001) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Input) guid(5000055) idx(0) --> type(Linear) guid(5000001) idx(0)
+type(Input) guid(5000054) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Linear) guid(5000018) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(Linear) guid(5000019) idx(0)
+type(Input) guid(5000053) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(Linear) guid(5000022) idx(0)
+type(Linear) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(Linear) guid(5000025) idx(0)
+type(Linear) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(Linear) guid(5000028) idx(0)
+sink_node Linear_5000052
+output shape: 
+input shape: 
+type(Concat) guid(5000047) idx(0) --> type(Linear) guid(5000048) idx(0)
+type(Linear) guid(5000048) idx(0) --> type(Linear) guid(5000049) idx(0)
+type(Linear) guid(5000049) idx(0) --> type(Linear) guid(5000050) idx(0)
+type(Linear) guid(5000051) idx(0) --> type(Linear) guid(5000052) idx(0)
+type(Linear) guid(5000050) idx(0) --> type(Linear) guid(5000051) idx(0)
+sink_node Linear_5000052
+output shape: 
+input shape: 
+20962/1,64/1,1/1,
+[0 - 7f8bb4d3b000]    2.713783 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.857006 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.864368 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.870537 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.874497 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.876011 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.876585 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.877222 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.879524 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.880089 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.880777 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.882871 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.883858 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.884761 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.887461 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    2.888553 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(Linear) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(Linear) guid(5000025) idx(0)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(Linear) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(Linear) guid(5000022) idx(0)
+type(Input) guid(5000053) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Linear) guid(5000018) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Input) guid(5000055) idx(0) --> type(Linear) guid(5000001) idx(0)
+type(Linear) guid(5000001) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000041) idx(0) --> type(Linear) guid(5000042) idx(0)
+type(Linear) guid(5000043) idx(0) --> type(Linear) guid(5000044) idx(0)
+type(Linear) guid(5000040) idx(0) --> type(Linear) guid(5000041) idx(0)
+type(Input) guid(5000059) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(Linear) guid(5000028) idx(0)
+type(Linear) guid(5000042) idx(0) --> type(Linear) guid(5000043) idx(0)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000045) idx(0) --> type(Linear) guid(5000046) idx(0)
+type(Linear) guid(5000008) idx(0) --> type(Concat) guid(5000047) idx(0)
+type(Linear) guid(5000019) idx(0) --> type(Concat) guid(5000047) idx(3)
+type(Linear) guid(5000028) idx(0) --> type(Concat) guid(5000047) idx(4)
+type(Input) guid(5000056) idx(0) --> type(Concat) guid(5000047) idx(1)
+type(Linear) guid(5000037) idx(0) --> type(Concat) guid(5000047) idx(5)
+type(Linear) guid(5000046) idx(0) --> type(Concat) guid(5000047) idx(6)
+type(Input) guid(5000058) idx(0) --> type(Concat) guid(5000047) idx(2)
+type(Linear) guid(5000044) idx(0) --> type(Linear) guid(5000045) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(Linear) guid(5000019) idx(0)
+type(Linear) guid(5000039) idx(0) --> type(Linear) guid(5000040) idx(0)
+type(Input) guid(5000057) idx(0) --> type(Linear) guid(5000039) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(Linear) guid(5000034) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(Linear) guid(5000031) idx(0)
+type(Input) guid(5000054) idx(0) --> type(Linear) guid(5000030) idx(0)
+sink_node Concat_5000047
+output shape: 
+20962/1,64/1,1/1,
+input shape: 
+[Measure Concat] name(Concat_1000047_2000047) forward_time(0.0620) backward_time(0.0643)
+[0 - 7f8bb4d3b000]    6.542019 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]    9.856671 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   11.335787 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   12.844499 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   14.312671 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   15.775949 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   17.225731 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   18.814427 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   20.310623 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   21.876011 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   23.398713 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   24.881822 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   26.218885 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   27.710967 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   29.167711 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   30.563452 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   31.898365 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   33.156492 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   34.559834 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   36.043534 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   37.544517 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   38.904346 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   40.247581 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   41.719254 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   43.245588 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   44.702391 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   46.427727 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   47.993765 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   49.467798 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   50.905516 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   52.316290 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   53.627193 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   55.041848 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   56.540622 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   58.184942 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   59.902198 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   61.459131 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   63.072495 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   64.726459 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   66.311324 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   67.762806 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   69.377794 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   70.919656 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   72.613900 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   74.162546 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   75.627194 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   77.322309 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   78.780789 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   80.253874 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   81.818826 {4}{xfers}: Considering 98 possible xfers
+type(Concat) guid(5000047) idx(0) --> type(Linear) guid(5000048) idx(0)
+type(Linear) guid(5000048) idx(0) --> type(Linear) guid(5000049) idx(0)
+type(Linear) guid(5000049) idx(0) --> type(Linear) guid(5000050) idx(0)
+type(Linear) guid(5000051) idx(0) --> type(Linear) guid(5000052) idx(0)
+type(Linear) guid(5000050) idx(0) --> type(Linear) guid(5000051) idx(0)
+sink_node Linear_5000052
+output shape: 
+input shape: 
+20962/2,64/1,1/1,
+[0 - 7f8bb4d3b000]   83.266209 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.272152 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.280981 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.288014 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.292147 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.293878 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.294563 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.295252 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.297411 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.298044 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.298839 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.301026 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.302052 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.302955 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.305351 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.306375 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(Linear) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(Linear) guid(5000025) idx(0)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(Linear) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(Linear) guid(5000022) idx(0)
+type(Input) guid(5000053) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Linear) guid(5000018) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Input) guid(5000055) idx(0) --> type(Linear) guid(5000001) idx(0)
+type(Linear) guid(5000001) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000041) idx(0) --> type(Linear) guid(5000042) idx(0)
+type(Linear) guid(5000043) idx(0) --> type(Linear) guid(5000044) idx(0)
+type(Linear) guid(5000040) idx(0) --> type(Linear) guid(5000041) idx(0)
+type(Input) guid(5000059) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(Linear) guid(5000028) idx(0)
+type(Linear) guid(5000042) idx(0) --> type(Linear) guid(5000043) idx(0)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000045) idx(0) --> type(Linear) guid(5000046) idx(0)
+type(Linear) guid(5000008) idx(0) --> type(Concat) guid(5000047) idx(0)
+type(Linear) guid(5000019) idx(0) --> type(Concat) guid(5000047) idx(3)
+type(Linear) guid(5000028) idx(0) --> type(Concat) guid(5000047) idx(4)
+type(Input) guid(5000056) idx(0) --> type(Concat) guid(5000047) idx(1)
+type(Linear) guid(5000037) idx(0) --> type(Concat) guid(5000047) idx(5)
+type(Linear) guid(5000046) idx(0) --> type(Concat) guid(5000047) idx(6)
+type(Input) guid(5000058) idx(0) --> type(Concat) guid(5000047) idx(2)
+type(Linear) guid(5000044) idx(0) --> type(Linear) guid(5000045) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(Linear) guid(5000019) idx(0)
+type(Linear) guid(5000039) idx(0) --> type(Linear) guid(5000040) idx(0)
+type(Input) guid(5000057) idx(0) --> type(Linear) guid(5000039) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(Linear) guid(5000034) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(Linear) guid(5000031) idx(0)
+type(Input) guid(5000054) idx(0) --> type(Linear) guid(5000030) idx(0)
+sink_node Concat_5000047
+output shape: 
+20962/2,64/1,1/1,
+input shape: 
+[0 - 7f8bb4d3b000]   83.341542 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.480489 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.584687 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.682282 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.782394 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.874416 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   83.972901 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.069773 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.172493 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.273319 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.372631 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.467973 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.564746 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.668702 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.770456 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.873505 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   84.979150 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.067445 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.160370 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.261483 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.358288 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.458105 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.551321 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.653600 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.760726 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.861123 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   85.968356 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.068837 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.174188 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.277523 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.385267 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.484064 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.576180 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.675325 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.779970 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.883931 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   86.994821 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   87.095555 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   87.206930 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   87.309131 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   87.411749 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   87.520733 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   87.624870 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   87.729698 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   87.835197 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   87.939564 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.043882 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.146001 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.244967 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.343500 {4}{xfers}: Considering 98 possible xfers
+type(Concat) guid(5000047) idx(0) --> type(Linear) guid(5000048) idx(0)
+type(Linear) guid(5000048) idx(0) --> type(Linear) guid(5000049) idx(0)
+type(Linear) guid(5000049) idx(0) --> type(Linear) guid(5000050) idx(0)
+type(Linear) guid(5000051) idx(0) --> type(Linear) guid(5000052) idx(0)
+type(Linear) guid(5000050) idx(0) --> type(Linear) guid(5000051) idx(0)
+sink_node Linear_5000052
+output shape: 
+input shape: 
+20962/1,64/2,1/1,
+[0 - 7f8bb4d3b000]   88.581214 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.586904 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.594117 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.602933 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.606511 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.608003 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.608576 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.609174 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.611060 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.611616 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.612298 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.614106 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.614998 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.615803 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.617923 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.618831 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(Linear) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(Linear) guid(5000025) idx(0)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(Linear) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(Linear) guid(5000022) idx(0)
+type(Input) guid(5000053) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Linear) guid(5000018) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Input) guid(5000055) idx(0) --> type(Linear) guid(5000001) idx(0)
+type(Linear) guid(5000001) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000041) idx(0) --> type(Linear) guid(5000042) idx(0)
+type(Linear) guid(5000043) idx(0) --> type(Linear) guid(5000044) idx(0)
+type(Linear) guid(5000040) idx(0) --> type(Linear) guid(5000041) idx(0)
+type(Input) guid(5000059) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(Linear) guid(5000028) idx(0)
+type(Linear) guid(5000042) idx(0) --> type(Linear) guid(5000043) idx(0)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000045) idx(0) --> type(Linear) guid(5000046) idx(0)
+type(Linear) guid(5000008) idx(0) --> type(Concat) guid(5000047) idx(0)
+type(Linear) guid(5000019) idx(0) --> type(Concat) guid(5000047) idx(3)
+type(Linear) guid(5000028) idx(0) --> type(Concat) guid(5000047) idx(4)
+type(Input) guid(5000056) idx(0) --> type(Concat) guid(5000047) idx(1)
+type(Linear) guid(5000037) idx(0) --> type(Concat) guid(5000047) idx(5)
+type(Linear) guid(5000046) idx(0) --> type(Concat) guid(5000047) idx(6)
+type(Input) guid(5000058) idx(0) --> type(Concat) guid(5000047) idx(2)
+type(Linear) guid(5000044) idx(0) --> type(Linear) guid(5000045) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(Linear) guid(5000019) idx(0)
+type(Linear) guid(5000039) idx(0) --> type(Linear) guid(5000040) idx(0)
+type(Input) guid(5000057) idx(0) --> type(Linear) guid(5000039) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(Linear) guid(5000034) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(Linear) guid(5000031) idx(0)
+type(Input) guid(5000054) idx(0) --> type(Linear) guid(5000030) idx(0)
+sink_node Concat_5000047
+output shape: 
+20962/1,64/2,1/1,
+input shape: 
+[0 - 7f8bb4d3b000]   88.652326 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.789251 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.893600 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   88.989747 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.089769 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.182157 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.282602 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.379415 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.483442 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.582961 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.681866 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.775207 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.870463 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   89.974363 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.075983 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.179702 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.287309 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.374959 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.467675 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.568497 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.664650 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.759964 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.856580 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   90.961071 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.071364 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.174824 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.283722 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.385208 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.491741 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.594884 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.702464 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.800492 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.893346 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   91.991962 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   92.093618 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   92.196313 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   92.308616 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   92.409116 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   92.525231 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   92.629526 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   92.732889 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   92.842625 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   92.951039 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.058174 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.166422 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.270365 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.376500 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.478015 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.577760 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.677760 {4}{xfers}: Considering 98 possible xfers
+type(Concat) guid(5000047) idx(0) --> type(Linear) guid(5000048) idx(0)
+type(Linear) guid(5000048) idx(0) --> type(Linear) guid(5000049) idx(0)
+type(Linear) guid(5000049) idx(0) --> type(Linear) guid(5000050) idx(0)
+type(Linear) guid(5000051) idx(0) --> type(Linear) guid(5000052) idx(0)
+type(Linear) guid(5000050) idx(0) --> type(Linear) guid(5000051) idx(0)
+sink_node Linear_5000052
+output shape: 
+input shape: 
+20962/2,64/2,1/1,
+[0 - 7f8bb4d3b000]   93.913265 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(Linear) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(Linear) guid(5000025) idx(0)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(Linear) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(Linear) guid(5000022) idx(0)
+type(Input) guid(5000053) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Linear) guid(5000018) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Input) guid(5000055) idx(0) --> type(Linear) guid(5000001) idx(0)
+type(Linear) guid(5000001) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000041) idx(0) --> type(Linear) guid(5000042) idx(0)
+type(Linear) guid(5000043) idx(0) --> type(Linear) guid(5000044) idx(0)
+type(Linear) guid(5000040) idx(0) --> type(Linear) guid(5000041) idx(0)
+type(Input) guid(5000059) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(Linear) guid(5000028) idx(0)
+type(Linear) guid(5000042) idx(0) --> type(Linear) guid(5000043) idx(0)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000045) idx(0) --> type(Linear) guid(5000046) idx(0)
+type(Linear) guid(5000008) idx(0) --> type(Concat) guid(5000047) idx(0)
+type(Linear) guid(5000019) idx(0) --> type(Concat) guid(5000047) idx(3)
+type(Linear) guid(5000028) idx(0) --> type(Concat) guid(5000047) idx(4)
+type(Input) guid(5000056) idx(0) --> type(Concat) guid(5000047) idx(1)
+type(Linear) guid(5000037) idx(0) --> type(Concat) guid(5000047) idx(5)
+type(Linear) guid(5000046) idx(0) --> type(Concat) guid(5000047) idx(6)
+type(Input) guid(5000058) idx(0) --> type(Concat) guid(5000047) idx(2)
+type(Linear) guid(5000044) idx(0) --> type(Linear) guid(5000045) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(Linear) guid(5000019) idx(0)
+type(Linear) guid(5000039) idx(0) --> type(Linear) guid(5000040) idx(0)
+type(Input) guid(5000057) idx(0) --> type(Linear) guid(5000039) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(Linear) guid(5000034) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(Linear) guid(5000031) idx(0)
+type(Input) guid(5000054) idx(0) --> type(Linear) guid(5000030) idx(0)
+sink_node Concat_5000047
+output shape: 
+20962/2,64/2,1/1,
+input shape: 
+[0 - 7f8bb4d3b000]   93.932476 {4}{xfers}: Considering 98 possible xfers
+type(Concat) guid(5000047) idx(0) --> type(Linear) guid(5000048) idx(0)
+type(Linear) guid(5000048) idx(0) --> type(Linear) guid(5000049) idx(0)
+type(Linear) guid(5000049) idx(0) --> type(Linear) guid(5000050) idx(0)
+type(Linear) guid(5000051) idx(0) --> type(Linear) guid(5000052) idx(0)
+type(Linear) guid(5000050) idx(0) --> type(Linear) guid(5000051) idx(0)
+sink_node Linear_5000052
+output shape: 
+input shape: 
+20962/1,64/4,1/1,
+[0 - 7f8bb4d3b000]   93.980211 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.985793 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.991985 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.996944 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   93.999926 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.001167 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.001657 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.002171 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.003768 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.004247 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.004831 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.006269 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.007013 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.007712 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.009562 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.010307 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(Linear) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(Linear) guid(5000025) idx(0)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(Linear) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(Linear) guid(5000022) idx(0)
+type(Input) guid(5000053) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Linear) guid(5000018) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Input) guid(5000055) idx(0) --> type(Linear) guid(5000001) idx(0)
+type(Linear) guid(5000001) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000041) idx(0) --> type(Linear) guid(5000042) idx(0)
+type(Linear) guid(5000043) idx(0) --> type(Linear) guid(5000044) idx(0)
+type(Linear) guid(5000040) idx(0) --> type(Linear) guid(5000041) idx(0)
+type(Input) guid(5000059) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(Linear) guid(5000028) idx(0)
+type(Linear) guid(5000042) idx(0) --> type(Linear) guid(5000043) idx(0)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000045) idx(0) --> type(Linear) guid(5000046) idx(0)
+type(Linear) guid(5000008) idx(0) --> type(Concat) guid(5000047) idx(0)
+type(Linear) guid(5000019) idx(0) --> type(Concat) guid(5000047) idx(3)
+type(Linear) guid(5000028) idx(0) --> type(Concat) guid(5000047) idx(4)
+type(Input) guid(5000056) idx(0) --> type(Concat) guid(5000047) idx(1)
+type(Linear) guid(5000037) idx(0) --> type(Concat) guid(5000047) idx(5)
+type(Linear) guid(5000046) idx(0) --> type(Concat) guid(5000047) idx(6)
+type(Input) guid(5000058) idx(0) --> type(Concat) guid(5000047) idx(2)
+type(Linear) guid(5000044) idx(0) --> type(Linear) guid(5000045) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(Linear) guid(5000019) idx(0)
+type(Linear) guid(5000039) idx(0) --> type(Linear) guid(5000040) idx(0)
+type(Input) guid(5000057) idx(0) --> type(Linear) guid(5000039) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(Linear) guid(5000034) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(Linear) guid(5000031) idx(0)
+type(Input) guid(5000054) idx(0) --> type(Linear) guid(5000030) idx(0)
+sink_node Concat_5000047
+output shape: 
+20962/1,64/4,1/1,
+input shape: 
+[0 - 7f8bb4d3b000]   94.042477 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.177995 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.282803 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.379683 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.484011 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.578141 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.678268 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.776639 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.881060 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   94.982269 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.084418 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.180622 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.279196 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.383445 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.481213 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.584810 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.693491 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.783043 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.878085 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   95.978728 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   96.076772 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   96.173778 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   96.268686 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   96.376606 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   96.484690 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   96.585457 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   96.692048 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   96.794548 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   96.899852 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.002890 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.110700 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.209240 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.303770 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.402509 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.505887 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.608207 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.718416 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.819873 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   97.934945 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   98.041345 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   98.146629 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   98.259286 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   98.369718 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   98.475869 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   98.584612 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   98.688761 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   98.795299 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   98.900456 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.000216 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.101566 {4}{xfers}: Considering 98 possible xfers
+type(Concat) guid(5000047) idx(0) --> type(Linear) guid(5000048) idx(0)
+type(Linear) guid(5000048) idx(0) --> type(Linear) guid(5000049) idx(0)
+type(Linear) guid(5000049) idx(0) --> type(Linear) guid(5000050) idx(0)
+type(Linear) guid(5000051) idx(0) --> type(Linear) guid(5000052) idx(0)
+type(Linear) guid(5000050) idx(0) --> type(Linear) guid(5000051) idx(0)
+sink_node Linear_5000052
+output shape: 
+input shape: 
+20962/1,64/1,1/1,
+[0 - 7f8bb4d3b000]   99.333145 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.336667 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.342397 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.347264 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.350356 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.351674 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.352273 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.352891 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.354597 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.355141 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.355807 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.357351 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.358149 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.358930 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.360903 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.361683 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(Linear) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(Linear) guid(5000025) idx(0)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(Linear) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(Linear) guid(5000022) idx(0)
+type(Input) guid(5000053) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Linear) guid(5000018) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Input) guid(5000055) idx(0) --> type(Linear) guid(5000001) idx(0)
+type(Linear) guid(5000001) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000041) idx(0) --> type(Linear) guid(5000042) idx(0)
+type(Linear) guid(5000043) idx(0) --> type(Linear) guid(5000044) idx(0)
+type(Linear) guid(5000040) idx(0) --> type(Linear) guid(5000041) idx(0)
+type(Input) guid(5000059) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(Linear) guid(5000028) idx(0)
+type(Linear) guid(5000042) idx(0) --> type(Linear) guid(5000043) idx(0)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000045) idx(0) --> type(Linear) guid(5000046) idx(0)
+type(Linear) guid(5000008) idx(0) --> type(Concat) guid(5000047) idx(0)
+type(Linear) guid(5000019) idx(0) --> type(Concat) guid(5000047) idx(3)
+type(Linear) guid(5000028) idx(0) --> type(Concat) guid(5000047) idx(4)
+type(Input) guid(5000056) idx(0) --> type(Concat) guid(5000047) idx(1)
+type(Linear) guid(5000037) idx(0) --> type(Concat) guid(5000047) idx(5)
+type(Linear) guid(5000046) idx(0) --> type(Concat) guid(5000047) idx(6)
+type(Input) guid(5000058) idx(0) --> type(Concat) guid(5000047) idx(2)
+type(Linear) guid(5000044) idx(0) --> type(Linear) guid(5000045) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(Linear) guid(5000019) idx(0)
+type(Linear) guid(5000039) idx(0) --> type(Linear) guid(5000040) idx(0)
+type(Input) guid(5000057) idx(0) --> type(Linear) guid(5000039) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(Linear) guid(5000034) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(Linear) guid(5000031) idx(0)
+type(Input) guid(5000054) idx(0) --> type(Linear) guid(5000030) idx(0)
+sink_node Concat_5000047
+output shape: 
+20962/1,64/1,1/1,
+input shape: 
+[0 - 7f8bb4d3b000]   99.392995 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.477921 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.532249 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.579970 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.630667 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.675310 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.725120 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.772194 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.824849 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.875614 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.926474 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]   99.972409 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.020115 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.071633 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.119836 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.172051 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.229226 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.274464 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.319778 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.367749 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.414568 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.462690 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.507640 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.560050 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.614489 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.663610 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.717326 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.768011 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.821514 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.873363 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.928708 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  100.978131 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.022180 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.069735 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.120516 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.171123 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.229771 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.279809 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.339178 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.391341 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.443116 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.498310 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.551723 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.603228 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.654163 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.706177 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.758167 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.807417 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.857476 {4}{xfers}: Considering 98 possible xfers
+[0 - 7f8bb4d3b000]  101.906601 {4}{xfers}: Considering 98 possible xfers
+Optimal cost: 56.8125
+digraph taskgraph {
+  node0 [label="{ Linear_5000033 | 5000033 | { 1 } | { 0 } }",shape=record];
+  node1 -> node0;
+  node2 [label="{ Linear_5000017 | 5000017 | { 1 } | { 0 } }",shape=record];
+  node3 -> node2;
+  node4 [label="{ Replicate_5100022 | 5100022 | { 2 | 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node5 -> node4;
+  node6 [label="{ Linear_5000042 | 5000042 | { 1 } | { 0 } }",shape=record];
+  node7 -> node6;
+  node7 [label="{ Linear_5000041 | 5000041 | { 1 } | { 0 } }",shape=record];
+  node8 -> node7;
+  node9 [label="{ Linear_5000003 | 5000003 | { 1 } | { 0 } }",shape=record];
+  node10 -> node9;
+  node11 [label="{ Linear_5096015 | 5096015 | { 2 } | { 0 | 1 } }",shape=record];
+  node12 -> node11;
+  node10 [label="{ Linear_5000002 | 5000002 | { 1 } | { 0 } }",shape=record];
+  node13 -> node10;
+  node13 [label="{ Linear_5000001 | 5000001 | { 1 } | { 0 } }",shape=record];
+  node14 -> node13;
+  node15 [label="{ Linear_5000034 | 5000034 | { 1 } | { 0 } }",shape=record];
+  node0 -> node15;
+  node16 [label="{ Linear_5000043 | 5000043 | { 1 } | { 0 } }",shape=record];
+  node6 -> node16;
+  node17 [label="{ Linear_5000044 | 5000044 | { 1 } | { 0 } }",shape=record];
+  node16 -> node17;
+  node18 [label="{ Linear_5000018 | 5000018 | { 1 } | { 0 } }",shape=record];
+  node2 -> node18;
+  node1 [label="{ Linear_5000032 | 5000032 | { 1 } | { 0 } }",shape=record];
+  node19 -> node1;
+  node20 [label="{ Combine_5099851 | 5099851 | { 1 | 2 } | { 0 | 1 } }",shape=record];
+  node21 -> node20;
+  node22 [label="{ Linear_5000046 | 5000046 | { 1 } | { 0 } }",shape=record];
+  node23 -> node22;
+  node23 [label="{ Linear_5000045 | 5000045 | { 1 } | { 0 } }",shape=record];
+  node17 -> node23;
+  node24 [label=FusedParallel_5118366];
+  node25 -> node24;
+  node26 [label="{ Linear_5000012 | 5000012 | { 1 } | { 0 } }",shape=record];
+  node27 -> node26;
+  node28 [label=Input_5000029];
+  node29 [label="{ Linear_5099326 | 5099326 | { 2 } | { 0 | 1 } }",shape=record];
+  node20 -> node29;
+  node19 [label="{ Linear_5000031 | 5000031 | { 1 } | { 0 } }",shape=record];
+  node30 -> node19;
+  node31 [label="{ Linear_5000015 | 5000015 | { 1 } | { 0 } }",shape=record];
+  node32 -> node31;
+  node30 [label="{ Linear_5000030 | 5000030 | { 1 } | { 0 } }",shape=record];
+  node28 -> node30;
+  node33 [label="{ Partition_5099852 | 5099852 | { 1 | 2 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node34 -> node33;
+  node3 [label="{ Linear_5000016 | 5000016 | { 1 } | { 0 } }",shape=record];
+  node31 -> node3;
+  node35 [label="{ Linear_5000036 | 5000036 | { 1 } | { 0 } }",shape=record];
+  node36 -> node35;
+  node37 [label="{ Linear_5000007 | 5000007 | { 1 } | { 0 } }",shape=record];
+  node38 -> node37;
+  node32 [label="{ Linear_5000014 | 5000014 | { 1 } | { 0 } }",shape=record];
+  node39 -> node32;
+  node40 [label="{ Linear_5095063 | 5095063 | { 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node41 -> node40;
+  node25 [label="{ Linear_5100019 | 5100019 | { 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node4 -> node25;
+  node42 [label=Input_5000010];
+  node43 [label="{ Linear_5000039 | 5000039 | { 1 } | { 0 } }",shape=record];
+  node44 -> node43;
+  node45 [label="{ Linear_5000005 | 5000005 | { 1 } | { 0 } }",shape=record];
+  node46 -> node45;
+  node47 [label="{ Combine_5098358 | 5098358 | { 1 | 2 } | { 0 } }",shape=record];
+  node48 -> node47;
+  node14 [label=Input_5000000];
+  node5 [label=Input_5000020];
+  node36 [label="{ Linear_5000035 | 5000035 | { 1 } | { 0 } }",shape=record];
+  node15 -> node36;
+  node49 [label="{ Linear_5095117 | 5095117 | { 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node40 -> node49;
+  node50 [label=Input_5000009];
+  node44 [label=Input_5000038];
+  node27 [label=Input_5000011];
+  node51 [label="{ Concat_5000047 | 5000047 | { 1 } | { 0 } }",shape=record];
+  node52 -> node51;
+  node22 -> node51;
+  node53 -> node51;
+  node47 -> node51;
+  node54 -> node51;
+  node42 -> node51;
+  node50 -> node51;
+  node55 [label="{ Linear_5096984 | 5096984 | { 2 } | { 0 | 1 } }",shape=record];
+  node11 -> node55;
+  node53 [label="{ Linear_5000037 | 5000037 | { 1 } | { 0 } }",shape=record];
+  node35 -> node53;
+  node54 [label="{ Linear_5000008 | 5000008 | { 1 } | { 0 } }",shape=record];
+  node37 -> node54;
+  node52 [label="{ Linear_5000019 | 5000019 | { 1 } | { 0 } }",shape=record];
+  node18 -> node52;
+  node56 [label="{ Linear_5095186 | 5095186 | { 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node57 -> node56;
+  node34 [label="{ Linear_5097519 | 5097519 | { 2 } | { 0 | 1 } }",shape=record];
+  node55 -> node34;
+  node8 [label="{ Linear_5000040 | 5000040 | { 1 } | { 0 } }",shape=record];
+  node43 -> node8;
+  node58 [label="{ Linear_5095148 | 5095148 | { 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node49 -> node58;
+  node48 [label="{ Linear_5098357 | 5098357 | { 2 } | { 0 | 1 } }",shape=record];
+  node29 -> node48;
+  node46 [label="{ Linear_5000004 | 5000004 | { 1 } | { 0 } }",shape=record];
+  node9 -> node46;
+  node12 [label="{ Linear_5096545 | 5096545 | { 2 } | { 0 | 1 } }",shape=record];
+  node24 -> node12;
+  node21 [label="{ Linear_5099849 | 5099849 | { 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node33 -> node21;
+  node41 [label="{ Partition_5095062 | 5095062 | { 1 | 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node51 -> node41;
+  node39 [label="{ Linear_5000013 | 5000013 | { 1 } | { 0 } }",shape=record];
+  node26 -> node39;
+  node38 [label="{ Linear_5000006 | 5000006 | { 1 } | { 0 } }",shape=record];
+  node45 -> node38;
+  node57 [label="{ Linear_5095173 | 5095173 | { 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node58 -> node57;
+}opotimal_views.size = 59
+legion_axis = 0
+views.size() = 59
+Deserialized Views...
+node[5118379]: type(Linear_5118379) view(1 1 0)  inEdge(node(5118374) idx(0))
+node[5118423]: type(Linear_5118423) view(1 4 0)  inEdge(node(5118422) idx(0))
+node[5118370]: type(Input_5118370) view(0 0 0) 
+node[5118410]: type(Linear_5118410) view(1 1 0)  inEdge(node(5118405) idx(0))
+node[5118425]: type(Linear_5118425) view(1 4 0)  inEdge(node(5118424) idx(0))
+node[5118405]: type(Linear_5118405) view(1 1 0)  inEdge(node(5118400) idx(0))
+node[5118419]: type(Concat_5118419) view(1 1 0)  inEdge(node(5118372) idx(0)) inEdge(node(5118409) idx(0)) inEdge(node(5118369) idx(0)) inEdge(node(5118413) idx(0)) inEdge(node(5118418) idx(0)) inEdge(node(5118410) idx(0)) inEdge(node(5118412) idx(0))
+node[5118401]: type(Linear_5118401) view(1 2 0)  inEdge(node(5118396) idx(0))
+node[5118381]: type(Linear_5118381) view(1 4 0)  inEdge(node(5118376) idx(0))
+node[5118385]: type(Linear_5118385) view(1 1 0)  inEdge(node(5118380) idx(0))
+node[5118421]: type(Linear_5118421) view(1 4 0)  inEdge(node(5118420) idx(0))
+node[5118422]: type(Linear_5118422) view(1 4 0)  inEdge(node(5118421) idx(0))
+node[5118369]: type(Input_5118369) view(0 0 0) 
+node[5118392]: type(Linear_5118392) view(1 1 0)  inEdge(node(5118387) idx(0))
+node[5118417]: type(Linear_5118417) view(1 2 0)  inEdge(node(5118416) idx(0))
+node[5118412]: type(Linear_5118412) view(1 1 0)  inEdge(node(5118407) idx(0))
+node[5118394]: type(Linear_5118394) view(1 1 0)  inEdge(node(5118389) idx(0))
+node[5118372]: type(Input_5118372) view(0 0 0) 
+node[5118409]: type(Linear_5118409) view(1 1 0)  inEdge(node(5118404) idx(0))
+node[5118411]: type(Partition_5118411) view(1 4 0)  inEdge(node(5118406) idx(0))
+node[5118397]: type(Linear_5118397) view(1 1 0)  inEdge(node(5118392) idx(0))
+node[5118418]: type(Combine_5118418) view(1 1 0)  inEdge(node(5118417) idx(0))
+node[5118399]: type(Linear_5118399) view(1 1 0)  inEdge(node(5118394) idx(0))
+node[5118382]: type(Linear_5118382) view(1 1 0)  inEdge(node(5118377) idx(0))
+node[5118414]: type(Linear_5118414) view(1 4 0)  inEdge(node(5118411) idx(0))
+node[5118391]: type(Linear_5118391) view(1 2 0)  inEdge(node(5118386) idx(0))
+node[5118404]: type(Linear_5118404) view(1 1 0)  inEdge(node(5118399) idx(0))
+node[5118371]: type(Input_5118371) view(0 0 0) 
+node[5118420]: type(Partition_5118420) view(1 4 0)  inEdge(node(5118419) idx(0))
+node[5118380]: type(Linear_5118380) view(1 1 0)  inEdge(node(5118375) idx(0))
+node[5118407]: type(Linear_5118407) view(1 1 0)  inEdge(node(5118402) idx(0))
+node[5118378]: type(Linear_5118378) view(1 1 0)  inEdge(node(5118373) idx(0))
+node[5118415]: type(Combine_5118415) view(1 2 0)  inEdge(node(5118414) idx(0))
+node[5118386]: type(FusedParallel_5118386) view(1 2 0)  inEdge(node(5118381) idx(0))
+node[5118388]: type(Linear_5118388) view(1 1 0)  inEdge(node(5118383) idx(0))
+node[5118398]: type(Linear_5118398) view(1 1 0)  inEdge(node(5118393) idx(0))
+node[5118408]: type(Linear_5118408) view(1 1 0)  inEdge(node(5118403) idx(0))
+node[5118413]: type(Linear_5118413) view(1 1 0)  inEdge(node(5118408) idx(0))
+node[5118384]: type(Linear_5118384) view(1 1 0)  inEdge(node(5118379) idx(0))
+node[5118377]: type(Linear_5118377) view(1 1 0)  inEdge(node(5118371) idx(0))
+node[5118406]: type(Linear_5118406) view(1 2 0)  inEdge(node(5118401) idx(0))
+node[5118403]: type(Linear_5118403) view(1 1 0)  inEdge(node(5118398) idx(0))
+node[5118374]: type(Linear_5118374) view(1 1 0)  inEdge(node(5118367) idx(0))
+node[5118393]: type(Linear_5118393) view(1 1 0)  inEdge(node(5118388) idx(0))
+node[5118396]: type(Linear_5118396) view(1 2 0)  inEdge(node(5118391) idx(0))
+node[5118367]: type(Input_5118367) view(0 0 0) 
+node[5118383]: type(Linear_5118383) view(1 1 0)  inEdge(node(5118378) idx(0))
+node[5118387]: type(Linear_5118387) view(1 1 0)  inEdge(node(5118382) idx(0))
+node[5118416]: type(Linear_5118416) view(1 2 0)  inEdge(node(5118415) idx(0))
+node[5118390]: type(Linear_5118390) view(1 1 0)  inEdge(node(5118385) idx(0))
+node[5118368]: type(Input_5118368) view(0 0 0) 
+node[5118389]: type(Linear_5candle_uno: /mnt/FlexFlow/src/mapper/mapper.cc:479: virtual void FlexFlow::FFMapper::slice_task(Legion::Mapping::MapperContext, const Legion::Task&, const Legion::Mapping::Mapper::SliceTaskInput&, Legion::Mapping::Mapper::SliceTaskOutput&): Assertion `(size_t)idx < devices->size()' failed.

@@ -1,0 +1,1505 @@
+batchSize(64) workersPerNodes(1) numNodes(1)
+workSpaceSize (1024 MB)
+num_nodes = 1 num_gpus_per_node = 4
+type(Add) guid(5000018) idx(0) --> type(Softmax) guid(5000019) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Add) guid(5000018) idx(1)
+type(Linear) guid(5000016) idx(0) --> type(Add) guid(5000018) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Input) guid(5000021) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Input) guid(5000020) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000009) idx(0)
+type(Linear) guid(5000008) idx(0) --> type(Linear) guid(5000010) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(Linear) guid(5000011) idx(0)
+type(Linear) guid(5000010) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Softmax_5000019
+output shape: 
+input shape: 
+type(Add) guid(5000018) idx(0) --> type(Softmax) guid(5000019) idx(0)
+sink_node Softmax_5000019
+output shape: 
+input shape: 
+8192/1,64/1,1/1,
+[0 - 7ff4911a7000]    2.506389 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]    2.507523 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000008) idx(0) --> type(Linear) guid(5000010) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000009) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Add) guid(5000018) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Add) guid(5000018) idx(1)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Input) guid(5000020) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Input) guid(5000021) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Linear) guid(5000010) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(Linear) guid(5000011) idx(0)
+sink_node Add_5000018
+output shape: 
+8192/1,64/1,1/1,
+input shape: 
+[0 - 7ff4911a7000]    7.307017 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]    9.550474 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]    9.640309 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]    9.740210 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]    9.853268 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]    9.961879 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   10.078557 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   10.205648 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   10.350291 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   10.468396 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   10.615626 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   10.764031 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   10.884610 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   11.039014 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   11.172866 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   11.282127 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   11.438216 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   11.586610 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   11.806377 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   11.955036 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   12.091913 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   12.311892 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   12.451240 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   12.606204 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   12.661492 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   12.791410 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   12.916717 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   12.971076 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.015982 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.060830 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.172948 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.216909 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.340105 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.383318 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.425956 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.514220 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.573021 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.669528 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.754304 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.811222 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.868203 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.915366 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   13.999992 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.047872 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.111158 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.154535 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.219643 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.264093 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.312803 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.356329 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.457508 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.512824 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.610252 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.694573 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.777452 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.833178 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.889211 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.934155 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   14.976415 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.052651 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.096081 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.144466 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.186582 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.268864 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.322966 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.383385 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.447595 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.501377 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.545413 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.589639 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.631911 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.674707 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.718814 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.761842 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.805136 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.922457 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   15.985699 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.115177 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.173499 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.229100 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.342308 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.389658 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.499936 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.547381 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.592063 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.636690 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.697692 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.764583 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.822825 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.867393 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.911144 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   16.959459 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.007936 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.053570 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.098467 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.143327 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.190537 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.238529 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.284491 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.334618 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.417511 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.462265 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.507442 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.551173 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.595044 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.639598 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.693835 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.745812 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.791440 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.846452 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.897315 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.944609 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   17.989361 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.032054 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.163757 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.234835 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.365471 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.423279 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.479647 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.584987 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.631244 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.733854 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.778877 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.823974 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.867385 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   18.973138 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.016745 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.059823 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.124742 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.189728 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.246581 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.291102 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.335978 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.391463 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.436487 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.479334 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.521184 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.565357 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.620337 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.663364 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.706706 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.751503 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.795470 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.838598 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.885566 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.940489 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   19.990874 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.042731 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.094985 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.139358 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.187725 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.231842 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.275498 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.383879 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.445515 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.538127 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.582030 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.624594 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.713386 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.755355 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.799774 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.860449 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.914432 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.956470 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   20.998379 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.049033 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.089204 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.130337 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.173959 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.217368 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.261184 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.305053 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.355848 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.404320 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.447431 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.491012 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.534954 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.578379 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.622416 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.669488 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.786898 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.835154 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.882386 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.928228 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   21.972326 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.016970 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.131359 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.207710 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.252242 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.297511 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.343814 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.388837 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.435588 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.482238 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.530464 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.574387 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.619110 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.665416 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.749119 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.794970 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.841557 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.884440 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.928680 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   22.971368 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.015182 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.059059 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.118941 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.162191 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.202813 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.243854 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.287096 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.329070 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.370920 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.462432 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.507909 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.552447 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.597279 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.639725 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.683679 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.726582 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.770444 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.811392 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.870430 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.913388 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.956240 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   23.999751 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   24.040112 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   24.089144 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   24.129159 {4}{xfers}: Considering 98 possible xfers
+type(Add) guid(5000018) idx(0) --> type(Softmax) guid(5000019) idx(0)
+sink_node Softmax_5000019
+output shape: 
+input shape: 
+8192/2,64/1,1/1,
+[0 - 7ff4911a7000]   24.871296 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   24.871552 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000008) idx(0) --> type(Linear) guid(5000010) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000009) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Add) guid(5000018) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Add) guid(5000018) idx(1)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Input) guid(5000020) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Input) guid(5000021) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Linear) guid(5000010) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(Linear) guid(5000011) idx(0)
+sink_node Add_5000018
+output shape: 
+8192/2,64/1,1/1,
+input shape: 
+[0 - 7ff4911a7000]   24.875093 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   24.901913 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   24.938269 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   24.979965 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   25.027331 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   25.136236 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   25.243478 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   25.353437 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   25.466246 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   25.596919 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   25.708844 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   25.820409 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   25.961797 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.129990 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.206870 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.266690 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.320375 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.366681 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.402601 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.449078 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.485124 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.522402 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.559581 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.611535 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.658174 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.692517 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.726111 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.772360 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.807940 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.844294 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.879546 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.913900 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.960181 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   26.994396 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   27.028677 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   27.203815 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   27.273861 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   27.432844 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   27.607730 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   27.748187 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   27.894783 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.039116 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.185719 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.254416 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.317163 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.365600 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.412565 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.473712 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.523833 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.572536 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.691522 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.738095 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.798443 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.845057 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   28.890460 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.010424 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.056429 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.191645 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.250527 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.359316 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.470021 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.529162 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.573836 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.620608 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.665891 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.701737 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.737165 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.783681 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.830341 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   29.968565 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.026038 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.080974 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.197556 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.243038 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.288037 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.401774 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.449806 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.484757 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.520309 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.566026 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.613376 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.659036 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.706362 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.740457 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.775454 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.808610 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   30.854500 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.012398 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.081002 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.246083 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.304938 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.455995 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.515512 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.565699 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.709315 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.761097 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.808486 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.867802 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.921823 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   31.986157 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.050449 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.112821 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.163455 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.212773 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.258589 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.304468 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.357675 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.475577 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.523652 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.570631 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.617494 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.662438 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.724465 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.786334 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.849129 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.899871 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   32.951108 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.005821 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.055255 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.102856 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.150514 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.195334 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.251821 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.308521 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.356064 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.402800 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.452225 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.502122 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.617707 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.667705 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.712602 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.763930 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.809037 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.857089 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.903088 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   33.949459 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.108422 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.180858 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.342503 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.402532 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.539660 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.674541 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.734723 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.785995 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.836385 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   34.884344 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.013249 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.060327 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.107034 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.155427 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.203789 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.269309 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.332299 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.390746 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.437551 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.482974 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.528181 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.574986 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.627319 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.673743 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.727858 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.791771 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.851687 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.913294 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   35.963287 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.012262 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.067418 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.115056 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.174202 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.230243 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.276508 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.324004 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.371510 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.417728 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.463496 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.510433 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.630400 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.677555 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.726306 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.773259 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.818699 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.863932 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.910513 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   36.957214 {4}{xfers}: Considering 98 possible xfers
+type(Add) guid(5000018) idx(0) --> type(Softmax) guid(5000019) idx(0)
+sink_node Softmax_5000019
+output shape: 
+input shape: 
+8192/4,64/1,1/1,
+[0 - 7ff4911a7000]   37.801323 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   37.801676 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000008) idx(0) --> type(Linear) guid(5000010) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000009) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Add) guid(5000018) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Add) guid(5000018) idx(1)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Input) guid(5000020) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Input) guid(5000021) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Linear) guid(5000010) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(Linear) guid(5000011) idx(0)
+sink_node Add_5000018
+output shape: 
+8192/4,64/1,1/1,
+input shape: 
+[0 - 7ff4911a7000]   37.805205 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   37.832427 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   37.870308 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   37.912261 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   37.960737 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.011982 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.124038 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.249603 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.322749 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.462776 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.537915 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.675795 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.754374 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.813557 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.875107 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.932048 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   38.985180 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.030792 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.066408 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.112292 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.148036 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.184497 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.221212 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.272768 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.319746 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.354554 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.387628 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.433820 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.469272 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.505686 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.541431 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.576416 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.631040 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.665938 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.700512 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.755761 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.805857 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.851832 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.887708 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.936310 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   39.983903 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.020634 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.055115 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.092553 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.127767 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.162300 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.197041 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.232754 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.273621 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.308541 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.364014 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.409998 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.457251 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.492572 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.529746 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.578335 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.625935 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.661372 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.695319 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.731493 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.766396 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.806906 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.840985 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.890945 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.935405 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   40.967327 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.001013 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.045174 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.080077 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.114782 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.148972 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.184111 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.219678 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.254602 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.289551 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.350917 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.405236 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.462564 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.512173 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.562330 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.600394 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.638362 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.676073 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.713172 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.750031 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.785510 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.837308 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.893229 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.940527 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   41.975213 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.009263 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.048160 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.087032 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.122843 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.159046 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.193706 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.232142 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.271121 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.307985 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.347986 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.383742 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.418889 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.454518 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.489541 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.524588 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.560543 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.606839 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.648919 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.685303 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.731883 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.773354 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.810202 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.845250 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.879737 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.941289 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   42.998904 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.054386 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.102133 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.148564 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.185195 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.221009 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.256077 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.290542 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.325885 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.360451 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.408320 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.443084 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.480516 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.542550 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.597671 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.644651 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.679737 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.714470 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.762064 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.797648 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.832029 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.864794 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.899324 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.945517 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   43.978994 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.013055 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.048343 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.084083 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.118060 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.156212 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.201703 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.242630 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.285501 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.327709 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.362074 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.398225 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.433829 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.469018 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.525446 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.576926 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.620508 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.653921 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.686915 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.729188 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.761611 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.796231 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.846357 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.889377 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.921171 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.953130 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   44.994169 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.025238 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.056354 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.090106 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.123674 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.157855 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.191723 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.232182 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.271274 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.304921 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.339456 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.374633 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.409076 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.446525 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.484808 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.519921 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.557502 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.595827 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.631107 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.666040 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.701064 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.736050 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.771701 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.806952 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.841941 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.877643 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.913099 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.950053 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   45.986594 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.023812 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.058166 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.092489 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.128950 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.163618 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.199319 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.236604 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.269818 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.304496 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.337561 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.372263 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.406928 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.440101 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.473429 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.505349 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.537645 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.571516 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.605303 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.638005 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.671614 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.706375 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.741935 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.777005 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.811579 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.845073 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.879442 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.912099 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.943800 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   46.975566 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   47.008010 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   47.040611 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   47.074078 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   47.105897 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   47.139618 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   47.170764 {4}{xfers}: Considering 98 possible xfers
+type(Add) guid(5000018) idx(0) --> type(Softmax) guid(5000019) idx(0)
+sink_node Softmax_5000019
+output shape: 
+input shape: 
+8192/1,64/2,1/1,
+[0 - 7ff4911a7000]   47.965057 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   47.965300 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000008) idx(0) --> type(Linear) guid(5000010) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000009) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Add) guid(5000018) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Add) guid(5000018) idx(1)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Input) guid(5000020) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Input) guid(5000021) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Linear) guid(5000010) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(Linear) guid(5000011) idx(0)
+sink_node Add_5000018
+output shape: 
+8192/1,64/2,1/1,
+input shape: 
+[0 - 7ff4911a7000]   47.969413 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   47.996908 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   48.034744 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   48.076772 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   48.124981 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   48.176954 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   48.363062 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   48.470503 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   48.598144 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   48.732849 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   48.867813 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.020425 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.158300 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.289653 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.403227 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.473324 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.524665 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.574998 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.614618 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.655504 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.690012 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.725099 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.773512 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.810811 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.844816 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.883287 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.918123 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.952162 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   49.984638 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.123536 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.178695 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.321209 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.455072 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.507873 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.562099 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.612422 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.751817 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.808178 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   50.934957 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.063184 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.117008 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.165354 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.213722 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.323258 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.368481 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.480766 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.531390 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.579563 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.683056 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.727789 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.764372 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.799131 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.847597 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.894014 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.940345 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   51.985003 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   52.018824 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   52.051767 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   52.096332 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   52.141127 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   52.174362 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   52.281240 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   52.326219 {4}{xfers}: Considering 98 possible xfers
+type(Add) guid(5000018) idx(0) --> type(Softmax) guid(5000019) idx(0)
+sink_node Softmax_5000019
+output shape: 
+input shape: 
+8192/2,64/2,1/1,
+[0 - 7ff4911a7000]   53.147830 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000008) idx(0) --> type(Linear) guid(5000010) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000009) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Add) guid(5000018) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Add) guid(5000018) idx(1)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Input) guid(5000020) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Input) guid(5000021) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Linear) guid(5000010) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(Linear) guid(5000011) idx(0)
+sink_node Add_5000018
+output shape: 
+8192/2,64/2,1/1,
+input shape: 
+[0 - 7ff4911a7000]   53.151981 {4}{xfers}: Considering 98 possible xfers
+type(Add) guid(5000018) idx(0) --> type(Softmax) guid(5000019) idx(0)
+sink_node Softmax_5000019
+output shape: 
+input shape: 
+8192/1,64/4,1/1,
+[0 - 7ff4911a7000]   53.161390 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   53.161562 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000008) idx(0) --> type(Linear) guid(5000010) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000009) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Add) guid(5000018) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Add) guid(5000018) idx(1)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Input) guid(5000020) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Input) guid(5000021) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Linear) guid(5000010) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(Linear) guid(5000011) idx(0)
+sink_node Add_5000018
+output shape: 
+8192/1,64/4,1/1,
+input shape: 
+[0 - 7ff4911a7000]   53.164891 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   53.192523 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   53.238786 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   53.281762 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   53.445934 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   53.547698 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   53.668851 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   53.796172 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   53.923602 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.048556 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.176176 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.286838 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.413033 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.484957 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.581859 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.653438 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.743108 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.797209 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.850915 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.882407 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.966594 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   54.998100 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.044698 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.129798 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.188362 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.243005 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.275267 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.347809 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.379376 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.421911 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.453962 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.498619 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.530841 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.572466 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.613740 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.696762 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.728392 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.760154 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.803664 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.845914 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.914631 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   55.976047 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.029310 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.059574 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.100506 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.152280 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.182452 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.223097 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.253898 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.293712 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.354762 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.395178 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.425825 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.456050 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.508764 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.551569 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.596971 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.639180 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.681165 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.720965 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.772357 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.802876 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.833676 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.875548 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.917973 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.957921 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   56.998028 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.036806 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.076584 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.134780 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.187317 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.221505 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.265050 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.309246 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.351393 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.385726 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.430223 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.474658 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.517300 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.547982 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.590772 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.632138 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.662511 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.692873 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.736131 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.777382 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.808628 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.917361 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   57.985016 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.110075 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.163030 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.214706 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.292724 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.371319 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.415189 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.458089 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.499987 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.541248 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.624236 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.704463 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.748834 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.792568 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.835959 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.878684 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   58.942908 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.003597 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.065629 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.117834 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.161342 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.204910 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.248346 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.291719 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.331483 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.373510 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.425010 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.474687 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.516559 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.560623 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.603488 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.647087 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.687257 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.728390 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.770048 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.809940 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.867237 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.914896 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   59.962325 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.002498 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.043402 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.083206 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.140099 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.186550 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.233136 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.273473 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.313815 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.355835 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.451035 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.514506 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.619040 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.672122 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.724785 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.802849 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.871630 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.915642 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   60.958368 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.002600 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.041037 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.117360 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.192146 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.232951 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.273754 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.315833 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.357429 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.417910 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.478228 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.530041 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.581403 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.623540 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.663573 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.705461 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.745940 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.785135 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.822551 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.871400 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.919667 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   61.960342 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.000358 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.039817 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.081023 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.120277 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.159977 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.198098 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.237098 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.290263 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.340291 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.384815 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.429920 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.469896 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.513135 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.557272 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.597546 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.638467 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.677673 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.717385 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.755320 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.798968 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.898963 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   62.968855 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.042054 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.082421 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.122564 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.206431 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.248522 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.290489 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.348905 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.399016 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.439088 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.478870 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.531061 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.572721 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.614477 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.654204 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.695769 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.736037 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.776591 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.827360 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.868306 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.906897 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.958134 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   63.998810 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.037986 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.079075 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.118810 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.159624 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.199610 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.237165 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.274413 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.314170 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.353106 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.388926 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.427316 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.469425 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.507576 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.545370 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.586436 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.615960 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.655430 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.693989 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.722806 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.751680 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.828354 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.902551 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.946506 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   64.988603 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.029992 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.068189 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.113338 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.155011 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.195942 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.236434 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.275838 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.316067 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.354948 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.394225 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.433524 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.474458 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   65.514125 {4}{xfers}: Considering 98 possible xfers
+type(Add) guid(5000018) idx(0) --> type(Softmax) guid(5000019) idx(0)
+sink_node Softmax_5000019
+output shape: 
+input shape: 
+8192/1,64/4,1/1,
+[0 - 7ff4911a7000]   66.219292 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.219475 {4}{xfers}: Considering 98 possible xfers
+type(Linear) guid(5000008) idx(0) --> type(Linear) guid(5000010) idx(0)
+type(Linear) guid(5000007) idx(0) --> type(Linear) guid(5000009) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000007) idx(0)
+type(Linear) guid(5000004) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000004) idx(0)
+type(Linear) guid(5000016) idx(0) --> type(Add) guid(5000018) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Add) guid(5000018) idx(1)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000016) idx(0)
+type(Input) guid(5000020) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(Linear) guid(5000013) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Input) guid(5000021) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000013) idx(0)
+type(Linear) guid(5000010) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(Linear) guid(5000011) idx(0)
+sink_node Add_5000018
+output shape: 
+8192/1,64/4,1/1,
+input shape: 
+[0 - 7ff4911a7000]   66.222918 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.242384 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.271794 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.304478 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.339294 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.448612 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.564913 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.668837 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.791026 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   66.937154 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.060843 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.166557 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.279196 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.350940 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.464034 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.533861 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.572658 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.602979 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.632395 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.652836 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.673550 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.693952 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.715863 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.838596 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.895512 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   67.950942 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.037380 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.123810 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.170228 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.216088 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.238089 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.259307 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.303498 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.346741 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.430183 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.513202 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.556863 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.600437 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.645151 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.688913 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.760358 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.824475 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.881426 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.926820 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   68.971810 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.027714 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.072827 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.118228 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.161738 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.204465 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.242399 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.272192 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.292332 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.311854 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.341812 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.361650 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.383643 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.404417 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.424728 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.477653 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.529791 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.572466 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.615355 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.658388 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.701447 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.743527 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.785379 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.825057 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.866776 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.924536 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   69.976463 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.000007 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.044098 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.088777 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.132061 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.155704 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.201221 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.247212 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.290001 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.311085 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.354438 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.397541 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.419038 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.439487 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.483739 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.528369 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.549842 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.592119 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.634978 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.673016 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.710841 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.744506 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.765611 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.785587 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.806107 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.825362 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.847295 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.867580 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.898432 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.925858 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.947400 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.968271 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   70.988883 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.009266 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.047623 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.084977 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.114971 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.135271 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.154268 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.184536 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.204517 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.223916 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.243335 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.263937 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.292119 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.318953 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.338532 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.359704 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.380460 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.400562 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.420680 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.441623 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.461609 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.481570 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.515035 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.544058 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.567120 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.590421 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.610931 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.634062 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.657162 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.678150 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.698850 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.718717 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.738497 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.759503 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.865042 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   71.931219 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.031727 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.085980 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.140310 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.220070 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.289372 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.334518 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.376976 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.418103 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.456942 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.528988 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.570268 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.613888 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.701774 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.746821 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.790946 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.854037 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.915531 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   72.969422 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.053844 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.097653 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.139836 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.182625 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.223909 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.263791 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.302032 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.351959 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.392515 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.432701 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.484408 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.526364 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.569761 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.611559 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.652825 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.693152 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.734094 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.790117 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.842355 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.888382 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.933146 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   73.974021 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.019953 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.063929 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.103813 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.144881 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.184969 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.225778 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.264005 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.307826 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.402073 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.462973 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.545766 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.641335 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.685708 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.728862 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.771608 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.814008 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.872718 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.924204 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   74.976085 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.018383 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.061166 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.103902 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.147105 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.187375 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.229640 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.269796 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.309848 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.360793 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.410976 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.452504 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.493579 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.534025 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.575412 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.598100 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.639823 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.661391 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.701966 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.741304 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.780476 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.821107 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.840974 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.879760 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.917045 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.938117 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   75.959507 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.000471 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.040013 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.060608 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.080359 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.117929 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.138948 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.177484 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.254976 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.326324 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.371182 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.413713 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.455540 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.494864 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.543293 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.585418 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.626336 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.667944 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.708719 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.749549 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.789048 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.828820 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.869524 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.910838 {4}{xfers}: Considering 98 possible xfers
+[0 - 7ff4911a7000]   76.951149 {4}{xfers}: Considering 98 possible xfers
+Optimal cost: 23.2381
+digraph taskgraph {
+  node0 [label=FusedParallel_5173704];
+  node1 -> node0;
+  node2 [label="{ Partition_5142132 | 5142132 | { 1 | 2 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node3 -> node2;
+  node4 [label=Input_5000001];
+  node5 [label="{ Linear_5140866 | 5140866 | { 2 } | { 0 | 1 } }",shape=record];
+  node6 -> node5;
+  node3 [label="{ Linear_5142130 | 5142130 | { 2 } | { 2 | 3 } }",shape=record];
+  node7 -> node3;
+  node8 [label="{ Linear_5140309 | 5140309 | { 2 } | { 2 | 3 } }",shape=record];
+  node9 -> node8;
+  node1 [label="{ Linear_5139896 | 5139896 | { 2 } | { 2 | 3 } }",shape=record];
+  node10 -> node1;
+  node11 [label="{ Linear_5141340 | 5141340 | { 2 } | { 0 | 1 } }",shape=record];
+  node12 -> node11;
+  node13 [label=FusedParallel_5173717];
+  node14 -> node13;
+  node10 [label=FusedParallel_5173705];
+  node15 -> node10;
+  node16 [label=FusedParallel_5173715];
+  node17 -> node16;
+  node18 [label="{ Replicate_5145749 | 5145749 | { 2 | 2 } | { 0 | 1 } }",shape=record];
+  node4 -> node18;
+  node7 [label=FusedParallel_5173707];
+  node19 -> node7;
+  node20 [label=FusedParallel_5173708];
+  node21 -> node20;
+  node22 [label=FusedParallel_5173709];
+  node23 -> node22;
+  node24 [label=FusedParallel_5173710];
+  node8 -> node24;
+  node25 [label=Input_5000000];
+  node26 [label="{ Linear_5141723 | 5141723 | { 2 } | { 2 | 3 } }",shape=record];
+  node13 -> node26;
+  node27 [label="{ Add_5140299 | 5140299 | { 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node28 -> node27;
+  node2 -> node27;
+  node29 [label="{ Replicate_5145609 | 5145609 | { 2 | 2 } | { 2 | 3 } }",shape=record];
+  node25 -> node29;
+  node30 [label="{ Softmax_5139461 | 5139461 | { 4 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node27 -> node30;
+  node12 [label=FusedParallel_5173711];
+  node31 -> node12;
+  node6 [label=FusedParallel_5173716];
+  node32 -> node6;
+  node21 [label="{ Linear_5145750 | 5145750 | { 2 } | { 0 | 1 } }",shape=record];
+  node18 -> node21;
+  node9 [label=FusedParallel_5173706];
+  node26 -> node9;
+  node28 [label="{ Partition_5141342 | 5141342 | { 1 | 2 } | { 0 | 1 | 2 | 3 } }",shape=record];
+  node11 -> node28;
+  node33 [label=FusedParallel_5173713];
+  node5 -> node33;
+  node34 [label=FusedParallel_5173714];
+  node35 -> node34;
+  node15 [label="{ Linear_5140681 | 5140681 | { 2 } | { 2 | 3 } }",shape=record];
+  node16 -> node15;
+  node19 [label="{ Linear_5141380 | 5141380 | { 2 } | { 2 | 3 } }",shape=record];
+  node0 -> node19;
+  node36 [label=FusedParallel_5173712];
+  node37 -> node36;
+  node31 [label="{ Linear_5140508 | 5140508 | { 2 } | { 0 | 1 } }",shape=record];
+  node33 -> node31;
+  node23 [label="{ Linear_5139682 | 5139682 | { 2 } | { 0 | 1 } }",shape=record];
+  node36 -> node23;
+  node14 [label="{ Linear_5145610 | 5145610 | { 2 } | { 2 | 3 } }",shape=record];
+  node29 -> node14;
+  node32 [label="{ Linear_5141539 | 5141539 | { 2 } | { 0 | 1 } }",shape=record];
+  node22 -> node32;
+  node35 [label="{ Linear_5141889 | 5141889 | { 2 } | { 0 | 1 } }",shape=record];
+  node20 -> node35;
+  node17 [label="{ Linear_5141048 | 5141048 | { 2 } | { 2 | 3 } }",shape=record];
+  node24 -> node17;
+  node37 [label="{ Linear_5145530 | 5145530 | { 2 } | { 0 | 1 } }",shape=record];
+  node34 -> node37;
+}mlp_unify: /mnt/FlexFlow/src/mapper/mapper.cc:479: virtual void FlexFlow::FFMapper::slice_task(Legion::Mapping::MapperContext, const Legion::Task&, const Legion::Mapping::Mapper::SliceTaskInput&, Legion::Mapping::Mapper::SliceTaskOutput&): Assertion `(size_t)idx < devices->size()' failed.
