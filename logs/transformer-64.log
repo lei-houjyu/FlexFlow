@@ -1,0 +1,1270 @@
+[0 - 7fcacc9bf000]    0.237158 {3}{Transformer}: batchSize(64) workersPerNodes(4) numNodes(1)
+[0 - 7fcacc9bf000]    0.237193 {3}{Transformer}: Hidden Size(1024)
+[0 - 7fcacc9bf000]    0.237197 {3}{Transformer}: Embedding Vocab Size(1024)
+[0 - 7fcacc9bf000]    0.237199 {3}{Transformer}: Number of Heads(16)
+[0 - 7fcacc9bf000]    0.237202 {3}{Transformer}: Number of Layers(12)
+[0 - 7fcacc9bf000]    0.237205 {3}{Transformer}: Sequence Length(512)
+workSpaceSize (1024 MB)
+workSpaceSize (1024 MB)
+workSpaceSize (1024 MB)
+workSpaceSize (1024 MB)
+num_nodes = 64 num_gpus_per_node = 1
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+type(MultiHeadAttn) guid(5000010) idx(0) --> type(Linear) guid(5000011) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(MultiHeadAttn) guid(5000010) idx(2)
+type(Linear) guid(5000009) idx(0) --> type(MultiHeadAttn) guid(5000010) idx(1)
+type(Linear) guid(5000009) idx(0) --> type(MultiHeadAttn) guid(5000010) idx(0)
+type(Linear) guid(5000008) idx(0) --> type(Linear) guid(5000009) idx(0)
+type(MultiHeadAttn) guid(5000007) idx(0) --> type(Linear) guid(5000008) idx(0)
+type(Linear) guid(5000006) idx(0) --> type(MultiHeadAttn) guid(5000007) idx(2)
+type(Linear) guid(5000006) idx(0) --> type(MultiHeadAttn) guid(5000007) idx(1)
+type(Linear) guid(5000006) idx(0) --> type(MultiHeadAttn) guid(5000007) idx(0)
+type(Linear) guid(5000005) idx(0) --> type(Linear) guid(5000006) idx(0)
+type(MultiHeadAttn) guid(5000004) idx(0) --> type(Linear) guid(5000005) idx(0)
+type(Linear) guid(5000003) idx(0) --> type(MultiHeadAttn) guid(5000004) idx(2)
+type(Linear) guid(5000003) idx(0) --> type(MultiHeadAttn) guid(5000004) idx(1)
+type(Linear) guid(5000003) idx(0) --> type(MultiHeadAttn) guid(5000004) idx(0)
+type(Linear) guid(5000002) idx(0) --> type(Linear) guid(5000003) idx(0)
+type(MultiHeadAttn) guid(5000001) idx(0) --> type(Linear) guid(5000002) idx(0)
+type(Input) guid(5000038) idx(0) --> type(MultiHeadAttn) guid(5000001) idx(2)
+type(Input) guid(5000038) idx(0) --> type(MultiHeadAttn) guid(5000001) idx(1)
+type(Input) guid(5000038) idx(0) --> type(MultiHeadAttn) guid(5000001) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(MultiHeadAttn) guid(5000013) idx(2)
+type(Linear) guid(5000012) idx(0) --> type(MultiHeadAttn) guid(5000013) idx(1)
+type(Linear) guid(5000012) idx(0) --> type(MultiHeadAttn) guid(5000013) idx(0)
+type(MultiHeadAttn) guid(5000013) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(MultiHeadAttn) guid(5000016) idx(2)
+type(Linear) guid(5000015) idx(0) --> type(MultiHeadAttn) guid(5000016) idx(1)
+type(Linear) guid(5000015) idx(0) --> type(MultiHeadAttn) guid(5000016) idx(0)
+type(MultiHeadAttn) guid(5000016) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000017) idx(0) --> type(Linear) guid(5000018) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(MultiHeadAttn) guid(5000019) idx(2)
+type(Linear) guid(5000018) idx(0) --> type(MultiHeadAttn) guid(5000019) idx(1)
+type(Linear) guid(5000018) idx(0) --> type(MultiHeadAttn) guid(5000019) idx(0)
+type(MultiHeadAttn) guid(5000019) idx(0) --> type(Linear) guid(5000020) idx(0)
+type(Linear) guid(5000020) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(MultiHeadAttn) guid(5000022) idx(2)
+type(Linear) guid(5000021) idx(0) --> type(MultiHeadAttn) guid(5000022) idx(1)
+type(Linear) guid(5000021) idx(0) --> type(MultiHeadAttn) guid(5000022) idx(0)
+type(MultiHeadAttn) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(MultiHeadAttn) guid(5000025) idx(2)
+type(Linear) guid(5000024) idx(0) --> type(MultiHeadAttn) guid(5000025) idx(1)
+type(Linear) guid(5000024) idx(0) --> type(MultiHeadAttn) guid(5000025) idx(0)
+type(MultiHeadAttn) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(MultiHeadAttn) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(MultiHeadAttn) guid(5000025) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(MultiHeadAttn) guid(5000025) idx(1)
+type(Linear) guid(5000024) idx(0) --> type(MultiHeadAttn) guid(5000025) idx(2)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(MultiHeadAttn) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(MultiHeadAttn) guid(5000022) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(MultiHeadAttn) guid(5000022) idx(1)
+type(Linear) guid(5000021) idx(0) --> type(MultiHeadAttn) guid(5000022) idx(2)
+type(Linear) guid(5000020) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(MultiHeadAttn) guid(5000019) idx(0) --> type(Linear) guid(5000020) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(MultiHeadAttn) guid(5000019) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(MultiHeadAttn) guid(5000019) idx(1)
+type(Linear) guid(5000018) idx(0) --> type(MultiHeadAttn) guid(5000019) idx(2)
+type(Linear) guid(5000017) idx(0) --> type(Linear) guid(5000018) idx(0)
+type(MultiHeadAttn) guid(5000016) idx(0) --> type(Linear) guid(5000017) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(MultiHeadAttn) guid(5000016) idx(0)
+type(Linear) guid(5000015) idx(0) --> type(MultiHeadAttn) guid(5000016) idx(1)
+type(Linear) guid(5000015) idx(0) --> type(MultiHeadAttn) guid(5000016) idx(2)
+type(Linear) guid(5000014) idx(0) --> type(Linear) guid(5000015) idx(0)
+type(MultiHeadAttn) guid(5000013) idx(0) --> type(Linear) guid(5000014) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(MultiHeadAttn) guid(5000013) idx(0)
+type(Linear) guid(5000012) idx(0) --> type(MultiHeadAttn) guid(5000013) idx(1)
+type(Linear) guid(5000012) idx(0) --> type(MultiHeadAttn) guid(5000013) idx(2)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(MultiHeadAttn) guid(5000010) idx(0)
+type(Linear) guid(5000009) idx(0) --> type(MultiHeadAttn) guid(5000010) idx(1)
+type(Linear) guid(5000009) idx(0) --> type(MultiHeadAttn) guid(5000010) idx(2)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(MultiHeadAttn) guid(5000010) idx(0) --> type(Linear) guid(5000011) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000011) idx(0) --> type(Linear) guid(5000012) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/1,512/1,64/1,1/1,
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+type(MultiHeadAttn) guid(5000025) idx(0) --> type(Linear) guid(5000026) idx(0)
+type(Linear) guid(5000026) idx(0) --> type(Linear) guid(5000027) idx(0)
+type(Linear) guid(5000024) idx(0) --> type(MultiHeadAttn) guid(5000025) idx(2)
+type(Linear) guid(5000024) idx(0) --> type(MultiHeadAttn) guid(5000025) idx(1)
+type(Linear) guid(5000024) idx(0) --> type(MultiHeadAttn) guid(5000025) idx(0)
+type(Linear) guid(5000023) idx(0) --> type(Linear) guid(5000024) idx(0)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(MultiHeadAttn) guid(5000022) idx(0) --> type(Linear) guid(5000023) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000021) idx(0) --> type(MultiHeadAttn) guid(5000022) idx(2)
+type(Linear) guid(5000021) idx(0) --> type(MultiHeadAttn) guid(5000022) idx(1)
+type(Linear) guid(5000021) idx(0) --> type(MultiHeadAttn) guid(5000022) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000020) idx(0) --> type(Linear) guid(5000021) idx(0)
+type(MultiHeadAttn) guid(5000019) idx(0) --> type(Linear) guid(5000020) idx(0)
+type(Linear) guid(5000018) idx(0) --> type(MultiHeadAttn) guid(5000019) idx(2)
+type(Linear) guid(5000018) idx(0) --> type(MultiHeadAttn) guid(5000019) idx(1)
+type(Linear) guid(5000018) idx(0) --> type(MultiHeadAttn) guid(5000019) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/1,512/1,64/1,1/1,
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/1,512/1,64/1,1/1,
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/1,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]    3.708711 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 1
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+sink_node Linear_5000036
+output shape: 
+1024/1,512/1,64/1,1/1,
+input shape: 
+1024/1,512/1,64/1,1/1,
+[Measure MultiHeadAttention] query(64 512 1024) key(64 512 1024) value(64 512 1024) output(64 512 1024)forward_time(26.7252) backward_time(50.5916)
+[0 - 7fcacc9a5000]    6.439516 {4}{xfers}: Considering 262 possible xfers
+[Measure MultiHeadAttention] query(32 512 1024) key(32 512 1024) value(32 512 1024) output(32 512 1024)forward_time(13.3552) backward_time(25.9369)
+[Measure MultiHeadAttention] query(16 512 1024) key(16 512 1024) value(16 512 1024) output(16 512 1024)forward_time(6.7461) backward_time(12.9882)
+[Measure MultiHeadAttention] query(8 512 1024) key(8 512 1024) value(8 512 1024) output(8 512 1024)forward_time(3.4636) backward_time(6.6316)
+[Measure MultiHeadAttention] query(4 512 1024) key(4 512 1024) value(4 512 1024) output(4 512 1024)forward_time(1.8677) backward_time(3.4430)
+[Measure MultiHeadAttention] query(2 512 1024) key(2 512 1024) value(2 512 1024) output(2 512 1024)forward_time(1.0192) backward_time(1.8444)
+[Measure MultiHeadAttention] query(1 512 1024) key(1 512 1024) value(1 512 1024) output(1 512 1024)forward_time(0.5971) backward_time(1.0240)
+[0 - 7fcacc9a5000]    9.032055 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.054303 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.086600 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.123990 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.153056 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.175428 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.196834 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.206451 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.215858 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 82
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/2,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]    9.284138 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.284675 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.284741 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.284844 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 4
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+sink_node Linear_5000036
+output shape: 
+1024/2,512/1,64/1,1/1,
+input shape: 
+1024/1,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]    9.285684 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.317200 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.346108 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.387923 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.430997 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.471254 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.501642 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.528814 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.544988 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.556267 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.557830 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.559785 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.561666 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.563935 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.566163 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.568701 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.579218 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.581047 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.583200 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.585226 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.587641 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.590057 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.601227 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.603441 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.605615 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.608078 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.610416 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.613044 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.622414 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.624690 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.626912 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.629416 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.632162 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.654884 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.667212 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.669174 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.671052 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.673205 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.675323 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.677870 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.689987 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.691985 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.694250 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.696472 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.699093 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.701662 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.711759 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.713921 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.716395 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.718804 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.721596 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.731643 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.734086 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.736591 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.739350 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.742042 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.750381 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.753008 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.755566 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.758511 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.767121 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.769642 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.772608 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.775502 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.782317 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.785052 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.788168 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.794975 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.798126 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.801150 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.806133 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.809377 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.814636 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.817786 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.821272 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.842052 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.853649 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.855902 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.858079 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.860567 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.863015 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.865769 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.877521 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.879589 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.882077 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.884514 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.887278 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.889979 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.898035 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.900502 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.902901 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.905676 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.913952 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.916345 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.919158 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.921893 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.930174 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.932959 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.935683 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.938727 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.945233 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.948145 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.951050 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.958010 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.960899 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.964111 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.969245 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.972271 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.977414 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.980759 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.984300 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]    9.995028 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.005321 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.015267 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.025403 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.034846 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.055199 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.067252 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.077844 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.079741 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.081574 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.083709 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.085893 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.088387 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.099824 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.101795 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.104090 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.106251 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.108772 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.111256 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.121044 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.123132 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.125581 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.127934 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.130669 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.151760 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.163349 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.165616 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.167816 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.170267 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.172746 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.175407 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.187303 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.189413 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.191855 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.194292 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.196976 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.199597 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.207741 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.210096 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.212451 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.215195 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.223602 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.225923 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.228671 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.231377 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.239553 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.242245 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.244945 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.247921 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.254515 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.257378 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.260189 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.266996 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.269788 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.272962 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.278062 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.281105 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.286180 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.289501 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.293028 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.303647 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.313838 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.323673 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.333574 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.343409 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.363392 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.375234 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.387053 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.389066 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.391418 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.393744 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.396320 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.399087 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.418655 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.428782 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.430879 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.433308 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.435703 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.438491 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.448196 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.450594 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.452958 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.455719 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.458446 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.466560 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.469191 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.471764 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.474708 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.483365 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.485949 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.488897 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.491797 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.498644 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.501387 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.504465 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.511111 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.514179 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.517199 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.522122 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.525326 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.530610 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.533756 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.537196 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.547138 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.557595 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.567202 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.576465 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.594865 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.604921 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.614737 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.624635 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.634236 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.643699 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.656410 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.658846 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.661172 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.663985 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.666725 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.669825 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.682516 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.684737 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.687384 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.689997 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.692909 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.695859 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.708194 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.710601 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.713004 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.715791 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.718522 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.721621 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.734287 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.736515 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.739142 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.741734 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.744659 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.747746 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.758027 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.760229 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.762845 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.765419 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.768563 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.778233 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.780686 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.783181 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.785989 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.788830 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.801765 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.804379 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.806978 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.809932 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.812838 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.816086 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.829031 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.831545 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.834374 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.837149 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.840231 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.843876 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.856361 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.858926 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.861508 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.864397 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.867239 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.870434 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.883067 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.885473 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.888209 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.890937 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.893949 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.897010 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.907711 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.910064 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.912809 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.915495 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.918380 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.929373 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.932037 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.934624 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.937569 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.940686 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.951539 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.953901 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.956796 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.959574 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.962445 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.973050 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.975710 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.978305 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.981254 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   10.984268 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.013906 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.032717 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.048933 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.054353 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.055977 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.062306 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.067973 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.073759 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.079571 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.085722 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.099466 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.104808 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.110807 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.116587 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.122906 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.128747 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.130615 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.132617 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.134481 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.136758 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.138770 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.141063 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.143192 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.145689 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.148020 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.150634 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.153263 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.156090 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.158913 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.167770 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.180921 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.187233 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.189230 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.194861 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.200799 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.207014 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.213095 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.225236 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.230880 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.236820 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.242546 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.248417 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.274003 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.288447 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.295276 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.301981 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.308392 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.315802 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.322957 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.325022 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.327191 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.329454 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.331755 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.334343 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.337271 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.352993 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.359622 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.366227 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.373107 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.379735 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.386482 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.400626 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.407206 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.413612 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.420626 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.427672 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.442342 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.449477 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.456705 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.463698 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.470716 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.483650 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.490868 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.497756 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.504678 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.517356 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.524375 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.531164 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.537999 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.549057 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.556422 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.563685 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.574570 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.581733 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.588961 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.598366 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.605815 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.614614 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.622119 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.629264 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.631613 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.633923 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.636130 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.638579 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.663083 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.678697 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.684771 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.690826 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.697149 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.703568 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.710089 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.725611 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.731632 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.738110 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.744785 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.751281 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.757930 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.770013 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.776436 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.782788 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.789270 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.802083 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.809224 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.816330 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.823247 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.835363 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.842001 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.848887 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.855503 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.866102 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.873047 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.879927 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.890480 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.897387 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.904294 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.912899 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.919862 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.928657 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.935628 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.942743 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.945035 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.947487 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.950028 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.952572 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.955172 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.957999 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.960437 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.962907 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.974924 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.977365 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.979691 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.982451 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.985156 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   11.987807 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.000187 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.002680 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.005442 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.008277 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.011022 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.013668 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.016256 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.018740 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.021586 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.024151 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.026978 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.030353 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.033483 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.036615 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.049629 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.052759 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.055676 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.058603 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.061575 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.064416 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.067079 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.069676 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.072432 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.075267 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.077828 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.080439 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.083278 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.086310 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.089225 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.101445 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.104380 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.107608 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.110667 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.113785 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.116803 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.120233 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.123819 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.126859 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.129691 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.132649 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.135411 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.138210 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.141056 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.143858 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.146745 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.149953 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.152757 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.155912 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.158945 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.171986 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.175305 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.178717 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.181890 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.185127 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.188286 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.191597 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.195000 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.198311 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.201588 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.205018 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.207905 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.210942 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.213829 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.216946 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.219727 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.222619 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.226073 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.229477 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.232895 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.236136 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.239117 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.263665 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.278917 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.294457 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.301622 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.308094 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.314830 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.321329 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.328545 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.330708 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.332996 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.335365 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.337877 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.340552 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.343115 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.353959 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.368397 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.375598 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.377786 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.384308 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.390457 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.396809 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.403352 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.417848 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.424188 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.430441 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.437045 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.443671 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.445944 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.471635 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.487767 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.494355 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.500915 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.507707 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.514847 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.522072 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.538645 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.545390 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.552345 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.559050 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.565686 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.572717 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.585729 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.592822 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.599661 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.606819 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.619453 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.626287 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.633128 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.639924 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.652576 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.659768 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.667282 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.674682 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.685913 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.693133 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.700346 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.711603 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.718803 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.726328 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.735130 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.742071 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.751033 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.758388 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.765635 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.768260 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.770749 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.773213 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.775798 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.778298 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.780776 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.793952 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.796580 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.799200 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.812188 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.814685 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.817407 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.820014 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.822581 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.825105 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.827952 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.830672 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.844147 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.846932 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.849751 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.852462 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.855379 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.858119 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.860913 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.863791 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.877308 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.880237 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.883246 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.886440 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.889718 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.892565 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.895356 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.898354 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.901186 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.903938 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.906959 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.920317 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.923401 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.926736 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.929865 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.933363 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.936964 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.939910 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.943101 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.946758 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.949918 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.952898 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.956154 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.959359 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.967426 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.970042 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.972653 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.975577 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.984073 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.986466 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.989250 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.992199 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.995285 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   12.998238 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.009620 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.012272 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.015298 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.018247 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.021320 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.032486 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.035316 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.038137 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.041139 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.044138 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.055282 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.057891 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.060804 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.063660 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.066874 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.077786 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.080538 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.083266 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.086276 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.089249 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.092402 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.095458 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.119311 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.133206 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.149402 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.155710 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.162234 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.168901 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.175530 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.182430 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.184978 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.187471 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.210956 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.225089 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.231232 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.237609 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.244212 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.250930 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.264723 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.271295 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.278081 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.284809 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.291783 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.304027 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.310676 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.317279 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.323811 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.336989 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.344231 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.351409 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.358500 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.369039 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.375596 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.382654 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.393086 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.399783 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.406889 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.415545 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.422710 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.431671 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.438956 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.446212 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.448866 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.451815 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.464002 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.466755 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.469489 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.472459 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.475498 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.487943 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.490793 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.493484 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.496340 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.499560 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.502432 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.515182 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.518453 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.521562 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.525207 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.528324 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.531362 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.534421 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.537471 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.550344 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.553503 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.556773 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.560166 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.563566 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.567056 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.570226 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.573551 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.577124 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.580272 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.601991 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.613951 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.626179 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.638235 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.651828 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.664718 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.668133 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.671565 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.684417 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.687123 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.689882 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.692950 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.696000 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.699160 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.712063 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.714578 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.717520 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.720409 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.723636 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.726902 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.730326 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.733901 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.746560 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.749291 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.752060 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.755132 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.758158 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.761522 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.775759 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.778304 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.781257 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.784153 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.787376 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.790622 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.801799 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.804484 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.807553 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.810592 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.813715 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.824530 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.827328 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.830104 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.833255 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.836423 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.847694 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.850396 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.853406 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.856363 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.859543 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.870281 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.873055 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.875815 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.879027 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.882379 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.885895 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.889332 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.892646 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.895991 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.899685 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.903265 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.916576 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.919422 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.922341 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.925561 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.928808 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.932228 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.945279 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.947918 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.950978 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.953997 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.957384 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.960771 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.964214 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.967833 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.980826 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.983685 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.986584 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.989812 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.993078 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   13.996408 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.009502 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.012141 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.015193 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.018206 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.021566 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 948
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/4,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]   14.182128 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.182681 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.182748 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 3
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+sink_node Linear_5000036
+output shape: 
+1024/4,512/1,64/1,1/1,
+input shape: 
+1024/1,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]   14.183602 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.213075 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.239291 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.276126 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.318821 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.354677 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.382877 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.406766 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.420044 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.429734 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.431287 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.432813 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.434627 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.436351 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.438441 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.440494 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.449507 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.451164 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.452767 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.454736 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.456673 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 132
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/8,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]   14.582065 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.582637 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 2
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+sink_node Linear_5000036
+output shape: 
+1024/8,512/1,64/1,1/1,
+input shape: 
+1024/1,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]   14.583453 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.612844 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.645741 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.675365 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.713806 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.749729 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.777152 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.802032 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.814360 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.824258 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.825633 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.827299 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 118
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/16,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]   14.948099 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 1
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+sink_node Linear_5000036
+output shape: 
+1024/16,512/1,64/1,1/1,
+input shape: 
+1024/1,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]   14.949331 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   14.978424 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.009789 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.036750 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.075730 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.108462 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.135146 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.158417 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.170635 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.180251 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 97
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/32,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]   15.271141 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 1
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+sink_node Linear_5000036
+output shape: 
+1024/32,512/1,64/1,1/1,
+input shape: 
+1024/1,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]   15.272369 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.301193 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.326358 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.360719 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.399724 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.433003 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.457988 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.481369 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.493861 {4}{xfers}: Considering 262 possible xfers
+[0 - 7fcacc9a5000]   15.503771 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 90
+type(Linear) guid(5000036) idx(0) --> type(Linear) guid(5000037) idx(0)
+sink_node Linear_5000037
+output shape: 
+input shape: 
+1024/64,512/1,64/1,1/1,
+[0 - 7fcacc9a5000]   15.588259 {4}{xfers}: Considering 262 possible xfers
+[base_optimize] iter: 1
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(2)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(1)
+type(Linear) guid(5000027) idx(0) --> type(MultiHeadAttn) guid(5000028) idx(0)
+type(MultiHeadAttn) guid(5000028) idx(0) --> type(Linear) guid(5000029) idx(0)
+type(Linear) guid(5000029) idx(0) --> type(Linear) guid(5000030) idx(0)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(2)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(1)
+type(Linear) guid(5000030) idx(0) --> type(MultiHeadAttn) guid(5000031) idx(0)
+type(MultiHeadAttn) guid(5000031) idx(0) --> type(Linear) guid(5000032) idx(0)
+type(Linear) guid(5000032) idx(0) --> type(Linear) guid(5000033) idx(0)
+type(Linear) guid(5000035) idx(0) --> type(Linear) guid(5000036) idx(0)
+type(MultiHeadAttn) guid(5000034) idx(0) --> type(Linear) guid(5000035) idx(0)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(2)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(1)
+type(Linear) guid(5000033) idx(0) --> type(MultiHeadAttn) guid(5000034) idx(0)
+sink_node Linear_5000036
+output shape: 
+1024/64,512/1,64/1,1/1,
+input shape: 
+1024/1,512/1,64/1,1/1,
+transformer: /mnt/FlexFlow/src/runtime/substitution.cc:718: void FlexFlow::PCG::Graph::reshape_output_tensor(const FlexFlow::ParallelTensorShape&): Assertion `output_tensor->dims[i].degree == desired_shape.dims[i].degree' failed.
