@@ -1817,7 +1817,8 @@ std::unique_ptr<Graph> GraphSearchHelper::base_optimize(Graph const *r_graph, Si
   if (budget == 0) {
     log_xfers.warning() << "Base search budget is set to 0. This is probably not what you want (use the --budget flag to set the base search budget)";
   }
-  for (int iter = 0; iter < budget || budget == -1; iter++) {
+  int iter = 0;
+  for (; iter < budget || budget == -1; iter++) {
     log_xfers.spew() << "Considering " << candidates.size() << " candidates";
     if (candidates.empty()) {
       break;
@@ -1850,6 +1851,7 @@ std::unique_ptr<Graph> GraphSearchHelper::base_optimize(Graph const *r_graph, Si
       delete cur_graph;
     }
   }
+  printf("[base_optimize] iter: %d\n", iter);
 
   this->logger->debug() << "Optimized cost: " << best_graph->optimal_cost();
   //best_graph->print_dot();
