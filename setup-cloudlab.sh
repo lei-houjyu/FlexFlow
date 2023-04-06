@@ -8,9 +8,9 @@ if [ $# -lt 2 ]; then
 fi
 
 ssh_arg="-o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-cudnn_file="cudnn-linux-x86_64-8.8.0.121_cuda11-archive.tar.xz"
-cudnn_dir="~/Downloads"
-work_dir="/mnt"
+cudnn_file=cudnn-linux-x86_64-8.8.0.121_cuda11-archive.tar.xz
+cudnn_dir=~/Downloads
+work_dir=/mnt
 ssh_down=255
 ssh_up=0
 
@@ -67,4 +67,4 @@ ssh $ssh_arg $username@$ip "bash $work_dir/Anaconda3-2022.10-Linux-x86_64.sh -b"
 
 # Step 4: Build FlexFlow
 ssh $ssh_arg $username@$ip "git clone --recursive -b osdi2022ae https://github.com/flexflow/FlexFlow.git $work_dir/FlexFlow"
-ssh $ssh_arg $username@$ip "cd $work_dir/FlexFlow; sudo apt install -y pip > /dev/null 2>&1; pip install -r requirements.txt; mkdir build; ../config/config.linux; make -j 40"
+ssh $ssh_arg $username@$ip "cd $work_dir/FlexFlow; sudo apt install -y pip libhdf5-dev > /dev/null 2>&1; pip install -r requirements.txt; mkdir build; ../config/config.linux; make -j 40"
