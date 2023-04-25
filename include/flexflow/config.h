@@ -124,6 +124,7 @@ public:
   bool syntheticInput, profiling, perform_fusion;
   size_t simulator_work_space_size;
   size_t search_budget;
+  size_t max_budget;
   float search_alpha;
   bool search_overlap_backward_update;
   CompMode computationMode;

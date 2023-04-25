@@ -580,7 +580,8 @@ void GraphXfer::run(int depth, Graph* graph,
                     std::priority_queue<Graph*, std::vector<Graph*>, GraphCompare>& candidates,
                     std::unordered_set<size_t>& hashmap, float threshold, int maxNumOps, 
                     SimplificationSettings const &simplification_settings,
-                    int& num_matches_found, int& num_matches_rejected)
+                    int& num_matches_found, int& num_matches_rejected,
+                    int set_budget, int get_budget)
 {
   //printf("run: depth(%d) srcOps.size(%zu) graph.size(%zu) candidates(%zu)\n", depth, srcOps.size(), graph->inEdges.size(), candidates.size());
   if (depth >= (int)srcOps.size()) {
@@ -621,7 +622,7 @@ void GraphXfer::run(int depth, Graph* graph,
     }
     // TODO: remove me for better performance
     assert(newGraph->check_correctness());
-    if (newGraph->optimal_cost() < threshold && (int)newGraph->inEdges.size() < maxNumOps) {
+    if (newGraph->optimal_cost(set_budget, get_budget) < threshold && (int)newGraph->inEdges.size() < maxNumOps) {
       if (hashmap.find(newGraph->hash()) == hashmap.end()) {
         hashmap.insert(newGraph->hash());
         log_xfers.spew() << "Found new candidate";
@@ -641,7 +642,7 @@ void GraphXfer::run(int depth, Graph* graph,
         Node op = it.first;
         // Check mapOutput
         match(srcOp, op, graph);
-        run(depth + 1, graph, candidates, hashmap, threshold, maxNumOps, simplification_settings, num_matches_found, num_matches_rejected);
+        run(depth + 1, graph, candidates, hashmap, threshold, maxNumOps, simplification_settings, num_matches_found, num_matches_rejected, set_budget, get_budget);
         unmatch(srcOp, op, graph);
       }
     }
@@ -1603,6 +1604,15 @@ void GraphSearchHelper::graph_optimize(size_t budget,
   GraphOptimizeResult optimal = this->generic_sequence_optimize<GraphOptimizeResult>(graph, sink_node, tl::nullopt/*output_shape*/, tl::nullopt/*input_shape*/);
   this->logger->debug() << "Total cache size: " << this->cached_optimized_graphs.size();
   std::cout << "Optimal cost: " << optimal.cost << std::endl;
+  std::cout << "Max budget: " << this->model->config.max_budget << std::endl;
+  for (size_t b = 0; b < this->model->config.max_budget; b++) {
+    this->model->config.search_budget = b;
+    float current = this->generic_sequence_optimize<float>(graph, sink_node, tl::nullopt/*output_shape*/, tl::nullopt/*input_shape*/, b);
+    std::cout << "Cost with budget " << b << " is " << current << std::endl;
+    if (current == optimal.cost) {
+      break;
+    }
+  }
   SimplificationSettings settings;
   settings.fuse_parallel_ops = true;
   settings.remove_noops = true;
@@ -1787,7 +1797,8 @@ tl::optional<Node> GraphSearchHelper::find_split_node(Graph const *graph, int ba
   return best;
 }
 
-std::unique_ptr<Graph> GraphSearchHelper::base_optimize(Graph const *r_graph, SimplificationSettings const &simplification_settings) {
+std::unique_ptr<Graph> GraphSearchHelper::base_optimize(Graph const *r_graph,
+  SimplificationSettings const &simplification_settings, int get_budget) {
   // Construct graph substitutions
   TAG_ENTER(this->logger);
 
@@ -1797,7 +1808,7 @@ std::unique_ptr<Graph> GraphSearchHelper::base_optimize(Graph const *r_graph, Si
     /* graph_log_representation(r_graph, *this->logger); */
     // r_graph->print_dot();
   }
-  this->logger->debug() << "Starting cost: " << r_graph->optimal_cost();
+  this->logger->debug() << "Starting cost: " << r_graph->optimal_cost(0, get_budget);
 
   std::vector<GraphXfer*> xfers;
   this->load_graph_substitutions(xfers);
@@ -1809,7 +1820,7 @@ std::unique_ptr<Graph> GraphSearchHelper::base_optimize(Graph const *r_graph, Si
   candidates.push(graph);
   hashmap.insert(graph->hash());
   Graph *best_graph = new Graph(*graph);
-  float best_cost = best_graph->optimal_cost();
+  float best_cost = best_graph->optimal_cost(0, get_budget);
   int counter = 0;
   const float alpha = this->model->config.search_alpha;
 
@@ -1826,23 +1837,23 @@ std::unique_ptr<Graph> GraphSearchHelper::base_optimize(Graph const *r_graph, Si
 
     Graph *cur_graph = candidates.top();
     candidates.pop();
-    if (cur_graph->optimal_cost() < best_graph->optimal_cost()) {
+    if (cur_graph->optimal_cost(iter+1, get_budget) < best_graph->optimal_cost(iter+1, get_budget)) {
       delete best_graph;
       best_graph = cur_graph;
-      best_cost = cur_graph->optimal_cost();
-    } else if (cur_graph->optimal_cost() > best_cost * alpha) {
+      best_cost = cur_graph->optimal_cost(iter+1, get_budget);
+    } else if (cur_graph->optimal_cost(iter+1, get_budget) > best_cost * alpha) {
       continue;
     }
 
     log_xfers.info("[%d] cur_cost(%.4lf) best_cost(%.4lf) candidates.size(%zu)",
-           counter, cur_graph->optimal_cost(), best_cost, candidates.size());
+           counter, cur_graph->optimal_cost(iter+1, get_budget), best_cost, candidates.size());
 
     log_xfers.warning() << "Considering " << xfers.size() << " possible xfers";
     for (size_t i = 0; i < xfers.size(); i++) {
       int num_matches_found = 0,
           num_matches_rejected = 0;
       log_xfers.debug() << "Considering xfer: " << xfers[i]->get_name();
-      xfers[i]->run(0, cur_graph, candidates, hashmap, best_cost * alpha, 1000, simplification_settings, num_matches_found, num_matches_rejected);
+      xfers[i]->run(0, cur_graph, candidates, hashmap, best_cost * alpha, 1000, simplification_settings, num_matches_found, num_matches_rejected, iter+1, get_budget);
       log_xfers.debug() << "Rejected [ " << num_matches_rejected << " / " << num_matches_found << " ] matches";
       /* std::cout << "." << std::flush; */
     }
@@ -1851,9 +1862,12 @@ std::unique_ptr<Graph> GraphSearchHelper::base_optimize(Graph const *r_graph, Si
       delete cur_graph;
     }
   }
+  if (iter+1 > this->model->config.max_budget) {
+    this->model->config.max_budget = iter+1;
+  }
   printf("[base_optimize] iter: %d\n", iter);
 
-  this->logger->debug() << "Optimized cost: " << best_graph->optimal_cost();
+  this->logger->debug() << "Optimized cost: " << best_graph->optimal_cost(0, get_budget);
   //best_graph->print_dot();
   return std::unique_ptr<Graph>(best_graph);
 }
@@ -1863,20 +1877,20 @@ size_t gs_dp_state_hash(Graph const *graph,
                         tl::optional<ParallelTensorShape> const &output_shape,
                         tl::optional<ParallelTensorShape> const &input_shape)
 {
+  // printf("[gs_dp_state_hash]\n");
   size_t key = graph->hash();
-  hash_combine(key, sink_node.ptr);
+  hash_combine(key, sink_node.hash());
   hash_combine(key, output_shape);
   hash_combine(key, input_shape);
-  graph->print_in_edge();
-  printf("sink_node %s\n", sink_node.to_string().c_str());
-  printf("output shape: \n");
-  if (output_shape.has_value()) {
-    output_shape.value().print();
-  }
-  printf("input shape: \n");
-  if (input_shape.has_value()) {
-    input_shape.value().print();
-  }
+  // printf("sink_node %s %zu\n", sink_node.to_string().c_str(), sink_node.hash());
+  // printf("output shape: \n");
+  // if (output_shape.has_value()) {
+  //   output_shape.value().print();
+  // }
+  // printf("input shape: \n");
+  // if (input_shape.has_value()) {
+  //   input_shape.value().print();
+  // }
   return key;
 }
 
@@ -1899,20 +1913,20 @@ tl::optional<float> GraphSearchHelper::try_get_cost_from_cache<float>(size_t has
 }
 
 template <>
-float GraphSearchHelper::get_optimal_cost<float>(std::unique_ptr<Graph> optimized) const {
-  return optimized->generic_optimal_cost<float>(); 
+float GraphSearchHelper::get_optimal_cost<float>(std::unique_ptr<Graph> optimized, int get_budget) const {
+  return optimized->generic_optimal_cost<float>(0, get_budget); 
 }
 
 template <>
-GraphCostResult GraphSearchHelper::get_optimal_cost<GraphCostResult>(std::unique_ptr<Graph> optimized) const {
-  return optimized->generic_optimal_cost<GraphCostResult>();
+GraphCostResult GraphSearchHelper::get_optimal_cost<GraphCostResult>(std::unique_ptr<Graph> optimized, int get_budget) const {
+  return optimized->generic_optimal_cost<GraphCostResult>(0, get_budget);
 }
 
 template <>
-GraphOptimizeResult GraphSearchHelper::get_optimal_cost<GraphOptimizeResult>(std::unique_ptr<Graph> optimized) const {
+GraphOptimizeResult GraphSearchHelper::get_optimal_cost<GraphOptimizeResult>(std::unique_ptr<Graph> optimized, int get_budget) const {
   GraphOptimizeResult result;
   result.graph = *optimized;
-  GraphCostResult gcr = optimized->generic_optimal_cost<GraphCostResult>();
+  GraphCostResult gcr = optimized->generic_optimal_cost<GraphCostResult>(0, get_budget);
   result.cost = gcr.cost;
   result.views = gcr.views;
   return result;
@@ -1947,11 +1961,12 @@ T GraphSearchHelper::execute_sequence_split(
     tl::optional<ParallelTensorShape> const &input_shape,
     Node const &sink_node,
     Node const &bottleneck, 
-    ParallelTensorShape const &bottleneck_output_shape)
+    ParallelTensorShape const &bottleneck_output_shape,
+    int get_budget)
 {
   return sequence_cost<T>(
-    this->generic_sequence_optimize<T>(pre_graph.get(), bottleneck, bottleneck_output_shape, input_shape),
-    this->generic_sequence_optimize<T>(post_graph.get(), sink_node, output_shape, bottleneck_output_shape)
+    this->generic_sequence_optimize<T>(pre_graph.get(), bottleneck, bottleneck_output_shape, input_shape, get_budget),
+    this->generic_sequence_optimize<T>(post_graph.get(), sink_node, output_shape, bottleneck_output_shape, get_budget)
   );
 }
 
@@ -1960,7 +1975,8 @@ T GraphSearchHelper::generic_sequence_optimize(
     Graph const *graph, 
     Node const &sink_node, 
     tl::optional<ParallelTensorShape> const &output_shape, 
-    tl::optional<ParallelTensorShape> const &input_shape)
+    tl::optional<ParallelTensorShape> const &input_shape,
+    int get_budget)
 {
   /* int starting_depth = this->logger->get_depth(); */
 
@@ -1968,7 +1984,7 @@ T GraphSearchHelper::generic_sequence_optimize(
 
   size_t hash = gs_dp_state_hash(graph, sink_node, output_shape, input_shape);
   tl::optional<T> cached = this->try_get_cost_from_cache<T>(hash);
-  if (cached.has_value()) {
+  if (cached.has_value() && get_budget == INT_MAX) {
     this->logger->spew() << "Optimizing graph with " << graph->inEdges.size() << " nodes";
     {
       TAG_ENTER(this->logger);
@@ -2038,8 +2054,8 @@ T GraphSearchHelper::generic_sequence_optimize(
         settings.remove_trailing_parallel_ops = true;
       }
       settings.simplify_parallel_ops = true;
-      std::unique_ptr<Graph> optimized = this->base_optimize(&to_optimize, settings);
-      return_value = get_optimal_cost<T>(std::move(optimized)); //optimized->generic_optimal_cost<T>();
+      std::unique_ptr<Graph> optimized = this->base_optimize(&to_optimize, settings, get_budget);
+      return_value = get_optimal_cost<T>(std::move(optimized), get_budget); //optimized->generic_optimal_cost<T>();
     } else {
       this->logger->debug() << "Applying recursive case on bottleneck " << bottleneck.value().guid;
       std::unique_ptr<Graph> pre_graph, post_graph;
@@ -2078,7 +2094,8 @@ T GraphSearchHelper::generic_sequence_optimize(
               input_shape,
               sink_node,
               bottleneck.value(),
-              bottleneck_output_shape
+              bottleneck_output_shape,
+              get_budget
             );
 
             if (current_cost < best_cost) {
@@ -2104,7 +2121,8 @@ T GraphSearchHelper::generic_sequence_optimize(
           input_shape,
           sink_node,
           bottleneck.value(),
-          best_shape.value()
+          best_shape.value(),
+          get_budget
         );
       }
     }

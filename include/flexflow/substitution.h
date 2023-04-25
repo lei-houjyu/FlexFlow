@@ -22,6 +22,7 @@
 #include "tl/optional.h"
 #include "flexflow/utils/recursive_logger.h"
 #include "flexflow/substitution_loader.h"
+#include <climits>
 
 namespace FlexFlow::PCG {
 
@@ -203,7 +204,8 @@ public:
            std::priority_queue<Graph*, std::vector<Graph*>, GraphCompare>&,
            std::unordered_set<size_t>&, float threshold, int maxNumOps, 
            SimplificationSettings const &simplification_settings,
-           int& num_matches_found, int& num_matches_rejected);
+           int& num_matches_found, int& num_matches_rejected,
+           int set_budget = 0, int get_budget = INT_MAX);
 
   void find_matches(Graph const *, std::vector<GraphXferMatch>& matches);
   GraphXferMatch get_match_record(Graph const *) const;
@@ -238,7 +240,8 @@ private:
   T generic_sequence_optimize(Graph const *graph,
                               Node const &sink_node,
                               tl::optional<ParallelTensorShape> const &output_shape,
-                              tl::optional<ParallelTensorShape> const &input_shape);
+                              tl::optional<ParallelTensorShape> const &input_shape,
+                              int get_budget = INT_MAX);
 
   float sequence_optimize(Graph const *graph, 
                           Node const &sink_node, 
@@ -252,13 +255,15 @@ private:
                            tl::optional<ParallelTensorShape> const &input_shape,
                            Node const &sink_node,
                            Node const &bottleneck, 
-                           ParallelTensorShape const &bottleneck_output_shape);
+                           ParallelTensorShape const &bottleneck_output_shape,
+                           int get_budget = INT_MAX);
   void generate_all_pcg_xfers();
   void load_graph_substitutions(std::vector<GraphXfer*> &xfers) const;
   Graph *construct_graph();
   void subgraph_optimize(Graph *subgraph);
 
-  std::unique_ptr<Graph> base_optimize(Graph const *, SimplificationSettings const &simplification_settings);
+  std::unique_ptr<Graph> base_optimize(Graph const *,
+    SimplificationSettings const &simplification_settings, int get_budget = INT_MAX);
 
   std::vector<ParallelTensorShape> possible_split_output_tensor_shapes(Node const &) const;
   
@@ -272,7 +277,7 @@ private:
   void try_cache_result(size_t hash, T const &value);
 
   template <typename T>
-  T get_optimal_cost(std::unique_ptr<Graph> optimized) const;
+  T get_optimal_cost(std::unique_ptr<Graph> optimized, int get_budget = INT_MAX) const;
 private:
   int cache_hit;
   int cache_miss;

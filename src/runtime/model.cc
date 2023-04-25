@@ -3315,6 +3315,7 @@ FFConfig::FFConfig()
   workersPerNode = DefaultConfig::workersPerNode;
   simulator_work_space_size = DefaultConfig::simulatorWorkSpaceSize;
   search_budget = DefaultConfig::searchBudget;
+  max_budget = 0;
   search_alpha = DefaultConfig::searchAlpha;
   search_overlap_backward_update = DefaultConfig::searchOverlapBackwardUpdate;
   computationMode = COMP_MODE_TRAINING;
