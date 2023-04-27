@@ -35,6 +35,7 @@
 #include "flexflow/parallel_ops/fused_parallel_op.h"
 #include "flexflow/parallel_ops/combine.h"
 #include "flexflow/utils/disjoint_set.h"
+#include <iomanip>
 
 namespace FlexFlow::PCG {
 
@@ -1438,6 +1439,23 @@ T SearchHelper::graph_cost(const Graph* graph,
     // cached_graph_costs does not include sink_compute_time
     result = from_cache.second;
   } else {
+    std::cout << "cache miss\n";
+    size_t graph_hash = graph->hash(true);
+    if (sink.node.ptr) {
+      std::cout << std::setw(25) << "sink_node: "        << *((Op *)sink.node.ptr)     << std::endl;
+      std::cout << std::setw(25) << "sink_view: "        << sink.view                  << std::endl;
+    }
+    if (source.node.ptr) {
+      std::cout << std::setw(25) << "source_node: "      << *((Op *)source.node.ptr)   << std::endl;
+      std::cout << std::setw(25) << "source_view: "      << source.view                << std::endl;
+    }
+    std::cout << std::setw(25) << "graph_hash: "       << graph_hash                 << std::endl;
+    std::cout << std::setw(25) << "sink_node_hash: "   << sink.node.hash()           << std::endl;
+    std::cout << std::setw(25) << "sink_view_hash: "   << sink.node.hash()           << std::endl;
+    std::cout << std::setw(25) << "source_node_hash: " << sink.node.hash()           << std::endl;
+    std::cout << std::setw(25) << "source_view_hash: " << source.view.hash()         << std::endl;
+    std::cout << std::setw(25) << "total_hash: "       << hash                       << std::endl;
+
     if (graph->inEdges.size() <= 2) {
       result = this->estimate_xfer_cost<T>(graph, source, sink);
       this->logger->debug() << "Estimated xfer cost is " << this->get_cost(result);
@@ -1580,11 +1598,15 @@ size_t Graph::hash(bool print) const
   for (const auto& it : inEdges) {
     const auto& inList = it.second;
     size_t node_hash = ((Node)it.first).hash();
+    if (print) {
+      std::cout << *((Op *)(it.first.ptr));
+    }
     for (const auto& e : inList) {
       if (print) {
         printf("type(%s) guid(%zu) idx(%d) --> type(%s) guid(%zu) idx(%d)\n", 
           optype_to_string(e.srcOp.ptr->op_type).c_str(), e.srcOp.guid, e.srcIdx,
           optype_to_string(e.dstOp.ptr->op_type).c_str(), e.dstOp.guid, e.dstIdx);
+        std::cout << *((Op *)(e.srcOp.ptr));
       }
 
       size_t edge_hash = 17;
