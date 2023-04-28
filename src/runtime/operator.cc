@@ -14,6 +14,23 @@ size_t Op::get_params_hash() const {
   assert (false);
 }
 
+size_t Op::hash() const {
+  size_t total_hash = 0;
+  hash_combine(total_hash, op_type);
+  hash_combine(total_hash, data_type);
+  hash_combine(total_hash, name);
+  for (int i = 0; i < numInputs; i++) {
+    hash_combine(total_hash, inputs[i]->hash());
+    hash_combine(total_hash, trainableInputs[i]);
+  }
+  for (int i = 0; i < numOutputs; i++) {
+    hash_combine(total_hash, outputs[i]->hash());
+  }
+  for (int i = 0; i < numWeights; i++) {
+    hash_combine(total_hash, weights[i]->hash());
+  }
+}
+
 std::ostream& operator<<(std::ostream& os, const Op& op) {
   int w = 25;
   os << std::setw(w) << "ptr: "                    << &op              << std::endl

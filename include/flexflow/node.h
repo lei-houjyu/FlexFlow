@@ -63,6 +63,10 @@ struct Node {
   const Op* ptr;
 
   tl::optional<size_t> original_guid = tl::nullopt;
+
+  size_t hash() const {
+    return ptr->hash();
+  }
 };
 
 }; // namespace PCG

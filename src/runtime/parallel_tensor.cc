@@ -545,6 +545,17 @@ ParallelTensorShape ParallelTensorBase::get_shape() const {
   return shape;
 }
 
+size_t ParallelTensorBase::hash() const {
+  size_t total_hash = 0;
+  for (int i = 0; i < num_dims; i++) {
+    hash_combine(total_hash, dims[i].hash());
+  }
+  hash_combine(total_hash, data_type);
+  hash_combine(total_hash, sync_type);
+  hash_combine(total_hash, data_type);
+  return total_hash;
+}
+
 std::ostream& operator<<(std::ostream& os, const ParallelTensorBase& t) {
   int w = 25;
   os << std::setw(w) << " " << "parallel_tensor_guid: " << t.parallel_tensor_guid << std::endl
