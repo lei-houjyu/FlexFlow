@@ -58,14 +58,7 @@ struct ParallelDim {
     return os;
   }
 
-  size_t hash() const {
-    size_t total_hash = 0;
-    hash_combine(total_hash, size);
-    hash_combine(total_hash, degree);
-    hash_combine(total_hash, parallel_idx);
-    hash_combine(total_hash, is_replica_dim);
-    return total_hash;
-  }
+  size_t hash() const;
 };
 
 struct ParallelTensorShape {

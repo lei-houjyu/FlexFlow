@@ -47,17 +47,7 @@ struct Node {
       return "UnmappedOp_" + std::to_string(guid);
     }
   }
-  size_t hash() const {
-    if (!ptr) {
-      return std::hash<size_t>()(2);
-    } else if (ptr->op_type == OperatorType::OP_INPUT) {
-      return std::hash<size_t>()(3);
-    } else if (ptr->op_type == OperatorType::OP_NOOP) {
-      return std::hash<size_t>()(5);
-    } else {
-      return std::hash<size_t>()((size_t)ptr);
-    }
-  }
+
   static const Node INVALID_NODE;
   size_t guid;
   const Op* ptr;

@@ -18,7 +18,9 @@ size_t Op::hash() const {
   size_t total_hash = 0;
   hash_combine(total_hash, op_type);
   hash_combine(total_hash, data_type);
-  hash_combine(total_hash, name);
+  for (int i = 0; name[i] != '\0' && i < MAX_OPNAME; i++) {
+    hash_combine(total_hash, name[i]);
+  }
   for (int i = 0; i < numInputs; i++) {
     hash_combine(total_hash, inputs[i]->hash());
     hash_combine(total_hash, trainableInputs[i]);
@@ -29,6 +31,7 @@ size_t Op::hash() const {
   for (int i = 0; i < numWeights; i++) {
     hash_combine(total_hash, weights[i]->hash());
   }
+  return total_hash;
 }
 
 std::ostream& operator<<(std::ostream& os, const Op& op) {
