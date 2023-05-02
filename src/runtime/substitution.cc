@@ -1616,6 +1616,7 @@ void GraphSearchHelper::graph_optimize(size_t budget,
       break;
     }
   }
+  graph->search->cache_file.close();
   SimplificationSettings settings;
   settings.fuse_parallel_ops = true;
   settings.remove_noops = true;

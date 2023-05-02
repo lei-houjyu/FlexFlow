@@ -23,6 +23,7 @@
 #include "legion/legion_utilities.h"
 #include "flexflow/utils/recursive_logger.h"
 #include <climits>
+#include <fstream>
 
 extern LegionRuntime::Logger::Category log_dp;
 
@@ -212,6 +213,7 @@ public:
 
 public:
   mutable std::unique_ptr<RecursiveLogger> logger;
+  mutable std::fstream cache_file;
 private:
   template <typename T>
   T execute_nonsequence_split(std::unique_ptr<Graph> const &first_graph, 
@@ -232,6 +234,8 @@ private:
                            SequenceSplit const &split,
                            int set_budget = 0,
                            int get_budget = INT_MAX) const;
+
+  void load_cache() const;
 
 private:
   FFModel *model;

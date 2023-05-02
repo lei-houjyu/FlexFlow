@@ -79,6 +79,23 @@ SearchHelper::SearchHelper(FFModel *model)
   : model(model)
 { 
   this->logger = std::unique_ptr<RecursiveLogger>(new RecursiveLogger("DP"));
+  this->load_cache();
+}
+
+void SearchHelper::load_cache() const {
+  this->cache_file.open("fine_grained_cache.txt", std::fstream::in);
+  if (this->cache_file.is_open()) {
+    int hash;
+    float cost;
+    while (this->cache_file >> hash >> cost) {
+        std::cout << "hash = " << hash << ", cost = " << cost << std::endl;
+    }
+    this->cached_graph_costs[0][hash] = cost;
+    this->cache_file.close();
+  } else {
+      std::cerr << "Unable to open file" << std::endl;
+  }
+  this->cache_file.close();
 }
 
 template <typename T>
@@ -1502,6 +1519,10 @@ T SearchHelper::graph_cost(const Graph* graph,
                   << "backward(" << metrics.backward_time << ") " 
                   << "sync(" << metrics.sync_time << ")";
     this->add_operator_cost<T>(sink, metrics.forward_time + metrics.backward_time + metrics.sync_time, &result);
+  }
+
+  if (!from_cache.first) {
+    cache_file << hash << " " << result << std::endl;
   }
 
   return result;
