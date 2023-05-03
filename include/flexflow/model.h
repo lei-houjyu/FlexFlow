@@ -39,6 +39,8 @@
 #include "ffconst.h"
 #include "fftype.h"
 
+#include <chrono>
+
 namespace FlexFlow {
 
 enum TaskIDs {
@@ -941,6 +943,8 @@ void data_load_task(const Legion::Task* task,
 void register_flexflow_internal_tasks();
 
 void register_custom_tasks();
+
+typedef std::chrono::microseconds Microsec;
 
 }; // namespace FlexFlow
 

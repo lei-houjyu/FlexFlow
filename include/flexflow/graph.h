@@ -22,12 +22,20 @@
 #include "flexflow/graph_structures.h"
 #include "legion/legion_utilities.h"
 #include "flexflow/utils/recursive_logger.h"
-#include <climits>
 #include <fstream>
 
 extern LegionRuntime::Logger::Category log_dp;
 
 namespace FlexFlow::PCG {
+
+template<typename T>
+struct TimedCost {
+  // When a TimedCost is in the cache, the time indicates the search time for that task.
+  // When it's returned by a function, e.g., graph_cost, it represents the search time
+  // saved by the cache
+  Microsec time;
+  T cost;
+};
 
 struct Edge {
   Edge(void);
@@ -114,10 +122,10 @@ struct GraphCostResult {
 };
 
 template <typename T>
-T sequence_cost(T const &first, T const &second);
+TimedCost<T> sequence_cost(TimedCost<T> const &first, TimedCost<T> const &second);
 
 template <typename T>
-T parallel_cost(T const &first, T const &second);
+TimedCost<T> parallel_cost(TimedCost<T> const &first, TimedCost<T> const &second);
 
 size_t dp_state_hash(const Graph* graph,
                      const Node& sink_node,
@@ -149,28 +157,22 @@ public:
   SearchHelper(FFModel *model);
 
   template <typename T>
-  T graph_cost(const Graph* graph,
+  TimedCost<T> graph_cost(const Graph* graph,
                    const NodeAssignment& source,
                    const NodeAssignment& sink,
                    const MachineResource& resources,
-                   bool include_sink_compute_time,
-                   int set_budget = 0,
-                   int get_budget = INT_MAX) const;
+                   bool include_sink_compute_time) const;
   template <typename T>
-  T find_optimal_sequence_graph_time(Graph const *g,
+  TimedCost<T> find_optimal_sequence_graph_time(Graph const *g,
                                          Node const &bottleneck_node,
                                          NodeAssignment const &source,
                                          NodeAssignment const &sink,
-                                         MachineResource const &resources,
-                                         int set_budget = 0,
-                                         int get_budget = INT_MAX) const;
+                                         MachineResource const &resources) const;
   template <typename T>
-  T find_optimal_nonsequence_graph_time(Graph const *g,
+  TimedCost<T> find_optimal_nonsequence_graph_time(Graph const *g,
                                             NodeAssignment const &source,
                                             NodeAssignment const &sink,
-                                            MachineResource const &resources,
-                                            int set_budget = 0,
-                                            int get_budget = INT_MAX) const;
+                                            MachineResource const &resources) const;
   /* void find_optimal_nonsequence_graph_views(Graph const *g, */
   /*                                           NodeAssignment const &source, */
   /*                                           NodeAssignment const &sink, */
@@ -181,10 +183,10 @@ public:
   std::vector<MachineView> get_valid_machine_views(const Op* op, const MachineResource& resource, bool log = false) const;
 
   template <typename T>
-  std::pair<bool, T> try_get_cost_from_cache(size_t hash, int get_budget = INT_MAX) const;
+  std::pair<bool, TimedCost<T>> try_get_cost_from_cache(size_t hash) const;
 
   template <typename T>
-  void try_cache_result(size_t hash, T const &value, int set_budget = 0) const;
+  void try_cache_result(size_t hash, TimedCost<T> const &cost) const;
 
   template <typename T>
   T infinity() const;
@@ -201,7 +203,7 @@ public:
                        NodeAssignment const &sink) const;
 
   template <typename T>
-  void add_operator_cost(NodeAssignment const &, float, T *) const;
+  void add_operator_cost(NodeAssignment const &, float, TimedCost<T> *) const;
 
   template <typename T>
   float get_cost(T const &) const;
@@ -209,38 +211,32 @@ public:
   template <typename T>
   void check_matches_graph(Graph const *, T const &, Node const &) const;
 
-  void print(size_t hash) const;
-
 public:
   mutable std::unique_ptr<RecursiveLogger> logger;
   mutable std::fstream cache_file;
 private:
   template <typename T>
-  T execute_nonsequence_split(std::unique_ptr<Graph> const &first_graph, 
+  TimedCost<T> execute_nonsequence_split(std::unique_ptr<Graph> const &first_graph, 
                               std::unique_ptr<Graph> const &second_graph,
                               NodeAssignment const &source,
                               NodeAssignment const &sink,
                               MachineResource const &resources,
-                              NonsequenceSplit const &split,
-                              int set_budget = 0,
-                              int get_budget = INT_MAX) const;
+                              NonsequenceSplit const &split) const;
 
   template <typename T>
-  T execute_sequence_split(std::unique_ptr<Graph> const &first_graph,
+  TimedCost<T> execute_sequence_split(std::unique_ptr<Graph> const &first_graph,
                            std::unique_ptr<Graph> const &second_graph,
                            NodeAssignment const &source,
                            NodeAssignment const &sink,
                            MachineResource const &resources,
-                           SequenceSplit const &split,
-                           int set_budget = 0,
-                           int get_budget = INT_MAX) const;
+                           SequenceSplit const &split) const;
 
   void load_cache() const;
 
 private:
   FFModel *model;
 
-  mutable std::unordered_map<size_t, std::map<int, float>> cached_graph_costs;
+  mutable std::unordered_map<size_t, TimedCost<float>> cached_graph_costs;
   mutable std::unordered_map<size_t, std::unique_ptr<const std::vector<MachineView>>> cached_operator_valid_views;
 };
 
@@ -270,7 +266,7 @@ public:
   void replace_subgraph(std::unordered_set<Node> const &currentNodes, const Graph& replaceWith);
   Graph subgraph(std::unordered_set<Node> const &nodes) const;
   void contract_out_node(const Node&);
-  float optimal_cost(int set_budget = 0, int get_budget = INT_MAX) const;
+  TimedCost<float> optimal_cost() const;
   std::unordered_map<Node, MachineView> optimal_views() const;
   void remove_input_nodes();
   void duplicate_input_node(Node const &);
@@ -319,11 +315,12 @@ public:
   bool empty() const;
 
   template <typename T>
-  T generic_optimal_cost(int set_budget = 0, int get_budget = INT_MAX) const;
+  TimedCost<T> generic_optimal_cost() const;
 public:
   FFModel* model;
   SearchHelper* search;
   std::unordered_map<Node, std::unordered_set<Edge> > inEdges, outEdges;
+  TimedCost<float> best_result;
 private:
 
   void remove_inverse_parallel_ops();
