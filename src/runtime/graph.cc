@@ -90,7 +90,7 @@ void SearchHelper::load_cache() const {
     while (this->cache_file >> hash >> cost) {
         std::cout << "hash = " << hash << ", cost = " << cost << std::endl;
     }
-    this->cached_graph_costs[0][hash] = cost;
+    this->cached_graph_costs[hash] = cost;
     this->cache_file.close();
   } else {
       std::cerr << "Unable to open file" << std::endl;
@@ -105,13 +105,11 @@ T SearchHelper::execute_sequence_split(
     NodeAssignment const &source,
     NodeAssignment const &sink,
     MachineResource const &resources,
-    SequenceSplit const &bn,
-    int set_budget,
-    int get_budget) const 
+    SequenceSplit const &bn) const 
 {
   return sequence_cost<T>(
-      this->graph_cost<T>(pre_graph.get(), source, bn, resources, true, set_budget, get_budget),
-      this->graph_cost<T>(post_graph.get(), bn, sink, resources, false, set_budget, get_budget)
+      this->graph_cost<T>(pre_graph.get(), source, bn, resources, true),
+      this->graph_cost<T>(post_graph.get(), bn, sink, resources, false)
   );
 }
 
@@ -121,9 +119,7 @@ T SearchHelper::find_optimal_sequence_graph_time(
   Node const &bn_node,
   NodeAssignment const &source,
   NodeAssignment const &sink,
-  MachineResource const &resources,
-  int set_budget,
-  int get_budget
+  MachineResource const &resources
 ) const {
   std::unique_ptr<Graph> pre_graph;
   std::unique_ptr<Graph> post_graph;
@@ -170,9 +166,7 @@ T SearchHelper::find_optimal_sequence_graph_time(
         source,
         sink,
         resources,
-        {bn_node, bn_view},
-        set_budget,
-        get_budget
+        {bn_node, bn_view}
     );
 
     if (cost < optimal_cost) {
@@ -188,9 +182,7 @@ T SearchHelper::find_optimal_sequence_graph_time(
         source,
         sink,
         resources,
-        {bn_node, best_view},
-        set_budget,
-        get_budget
+        {bn_node, best_view}
     );
   }
 
@@ -206,9 +198,7 @@ T SearchHelper::execute_nonsequence_split(
   NodeAssignment const &source,
   NodeAssignment const &sink,
   MachineResource const &resources,
-  NonsequenceSplit const &split,
-  int set_budget,
-  int get_budget) const 
+  NonsequenceSplit const &split) const 
 {
   Graph const *first = first_graph.get();
   Graph const *second = second_graph.get();
@@ -219,8 +209,8 @@ T SearchHelper::execute_nonsequence_split(
     case SplitType::SEQUENTIAL:
       this->logger->debug() << "Exploring sequential nonsequence split";
       return sequence_cost<T>(
-          this->graph_cost<T>(first, source, sink, resources, false, set_budget, get_budget),
-          this->graph_cost<T>(second, source, sink, resources, false, set_budget, get_budget)
+          this->graph_cost<T>(first, source, sink, resources, false),
+          this->graph_cost<T>(second, source, sink, resources, false)
       );
     case SplitType::VERTICAL:
     {
@@ -232,8 +222,8 @@ T SearchHelper::execute_nonsequence_split(
       secondRes.start_gpu_id = resources.start_gpu_id + resources.all_gpus_per_node * split.param;
 
       return parallel_cost<T>(
-          this->graph_cost<T>(first, source, sink, firstRes, false, set_budget, get_budget),
-          this->graph_cost<T>(second, source, sink, secondRes, false, set_budget, get_budget)
+          this->graph_cost<T>(first, source, sink, firstRes, false),
+          this->graph_cost<T>(second, source, sink, secondRes, false)
       );
     }
     case SplitType::HORIZONTAL: 
@@ -246,8 +236,8 @@ T SearchHelper::execute_nonsequence_split(
       secondRes.start_gpu_id = resources.start_gpu_id + split.param;
 
       return parallel_cost<T>(
-          this->graph_cost<T>(first, source, sink, firstRes, false, set_budget, get_budget),
-          this->graph_cost<T>(second, source, sink, secondRes, false, set_budget, get_budget)
+          this->graph_cost<T>(first, source, sink, firstRes, false),
+          this->graph_cost<T>(second, source, sink, secondRes, false)
       );
     }
     default:
@@ -289,9 +279,7 @@ T SearchHelper::find_optimal_nonsequence_graph_time(
   Graph const *g,
   NodeAssignment const &source,
   NodeAssignment const &sink,
-  MachineResource const &resources,
-  int set_budget,
-  int get_budget
+  MachineResource const &resources
 ) const {
   std::unique_ptr<Graph> first_graph;
   std::unique_ptr<Graph> second_graph;
@@ -571,19 +559,6 @@ bool Graph::check_correctness(void)
     }
   }
   return okay;
-}
-
-void SearchHelper::print(size_t hash) const {
-  // mutable std::unordered_map<size_t, std::map<int, float>> cached_graph_costs
-  std::cout << "[SearchHelper::print]\n";
-  auto all_hash = this->cached_graph_costs[hash];
-  std::cout << hash << "={";
-  for (auto it = all_hash.begin(); it != all_hash.end(); it++) {
-    int budget = it->first;
-    int cost = it->second;
-    std::cout << budget << ":" << cost << ",";
-  }
-  std::cout << "}\n" << std::flush;
 }
 
 std::vector<MachineView> SearchHelper::get_valid_machine_views(Node const &node, const MachineResource& resource, bool log) const
@@ -1310,43 +1285,29 @@ template <>
 void SearchHelper::check_matches_graph<float>(Graph const *g, float const &r, Node const &sink) const { }
 
 template <>
-std::pair<bool, float> SearchHelper::try_get_cost_from_cache<float>(size_t hash, int get_budget) const {
+std::pair<bool, float> SearchHelper::try_get_cost_from_cache<float>(size_t hash) const {
   if (this->cached_graph_costs.find(hash) == this->cached_graph_costs.end()) {
     return {false, std::numeric_limits<float>::infinity()};
   } else {
-    std::map<int, float>::iterator it = this->cached_graph_costs[hash].upper_bound(get_budget);
-
-    if (it == this->cached_graph_costs[hash].begin()) {
-      return {false, std::numeric_limits<float>::infinity()};      
-    }
-
-    --it;
-    if (it->first > get_budget) {
-      this->print(hash);
-      std::cout << "Got " << it->first << ":" << it->second 
-        << " using budget " << get_budget << std::endl << std::flush;
-      assert(false);
-    }
-
-    return {true, it->second};
+    return {true, this->cached_graph_costs[hash]};
   }
 }
 
 template <>
-std::pair<bool, GraphCostResult> SearchHelper::try_get_cost_from_cache<GraphCostResult>(size_t hash, int get_budget) const {
+std::pair<bool, GraphCostResult> SearchHelper::try_get_cost_from_cache<GraphCostResult>(size_t hash) const {
   return {false, GraphCostResult::invalid()};
 }
 
 template <>
-void SearchHelper::try_cache_result<float>(size_t hash, float const &value, int set_budget) const {
+void SearchHelper::try_cache_result<float>(size_t hash, float const &value) const {
   this->logger->debug() << "cached_graph_costs[" << hash << "] = " << value;
-  this->cached_graph_costs[hash][set_budget] = value;
+  this->cached_graph_costs[hash] = value;
 }
 
 template <>
-void SearchHelper::try_cache_result<GraphCostResult>(size_t hash, GraphCostResult const &value, int set_budget) const {
+void SearchHelper::try_cache_result<GraphCostResult>(size_t hash, GraphCostResult const &value) const {
   this->logger->debug() << "cached_graph_costs[" << hash << "=" << value.cost << "]";
-  this->cached_graph_costs[hash][set_budget] = value.cost;
+  this->cached_graph_costs[hash] = value.cost;
 }
 
 template <>
@@ -1425,9 +1386,7 @@ T SearchHelper::graph_cost(const Graph* graph,
                           const NodeAssignment& source,
                           const NodeAssignment& sink,
                           const MachineResource& resources,
-                          bool include_sink_compute_time,
-                          int set_budget,
-                          int get_budget) const
+                          bool include_sink_compute_time) const
 {
   TAG_ENTER(this->logger);
   this->logger->debug() << "sink(" << sink.node.guid << ") "
@@ -1448,16 +1407,13 @@ T SearchHelper::graph_cost(const Graph* graph,
 
   T result;
 
-  std::pair<bool, T> from_cache = this->try_get_cost_from_cache<T>(hash, get_budget);
-  if (get_budget != INT_MAX) {
-    assert(from_cache.first);
-  }
+  std::pair<bool, T> from_cache = this->try_get_cost_from_cache<T>(hash);
   if (from_cache.first) {
     // cached_graph_costs does not include sink_compute_time
     result = from_cache.second;
   } else {
     std::cout << "cache miss\n";
-    size_t graph_hash = graph->hash(true);
+    size_t graph_hash = graph->hash();
     if (sink.node.ptr) {
       std::cout << std::setw(25) << "sink_node: "        << *((Op *)sink.node.ptr)     << std::endl;
       std::cout << std::setw(25) << "sink_view: "        << sink.view                  << std::endl;
@@ -1487,9 +1443,7 @@ T SearchHelper::graph_cost(const Graph* graph,
           bn_node,
           { source.node, source.view },
           { sink.node, sink.view },
-          resources,
-          set_budget,
-          get_budget
+          resources
         );
       } else {
         // sink node must have multiple branches
@@ -1500,14 +1454,12 @@ T SearchHelper::graph_cost(const Graph* graph,
           graph,
           { source.node, source.view },
           { sink.node, sink.view },
-          resources,
-          set_budget,
-          get_budget
+          resources
         );
       }
     }
 
-    this->try_cache_result<T>(hash, result, set_budget);
+    this->try_cache_result<T>(hash, result);
   }
 
   check_matches_graph<T>(graph, result, sink.node);
@@ -1528,10 +1480,9 @@ T SearchHelper::graph_cost(const Graph* graph,
   return result;
 }
 
-// set_budget: the min budget we need to reach the graph
-// get_budget: the budget we have to query the graph
-float Graph::optimal_cost(int set_budget, int get_budget) const {
-  return this->generic_optimal_cost<float>(set_budget, get_budget);
+
+float Graph::optimal_cost() const {
+  return this->generic_optimal_cost<float>();
 }
 
 std::unordered_map<Node, MachineView> Graph::optimal_views() const {
@@ -1567,7 +1518,7 @@ Graph Graph::reduced() const {
  * @return T the cost of the graph (along with any additional data in the return type)
  */
 template <typename T>
-T Graph::generic_optimal_cost(int set_budget, int get_budget) const
+T Graph::generic_optimal_cost() const
 {
   using FlexFlow::PCG::Utils::GraphStructure;
 
@@ -1597,9 +1548,7 @@ T Graph::generic_optimal_cost(int set_budget, int get_budget) const
         {Node::INVALID_NODE, MachineView::NO_VIEW},
         {sink_node, sink_view},
         resource,
-        true,
-        set_budget,
-        get_budget
+        true
     );
     if (new_cost < optimal) {
       optimal = new_cost;
