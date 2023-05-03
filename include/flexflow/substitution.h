@@ -22,7 +22,7 @@
 #include "tl/optional.h"
 #include "flexflow/utils/recursive_logger.h"
 #include "flexflow/substitution_loader.h"
-#include <climits>
+#include <fstream>
 
 namespace FlexFlow::PCG {
 
@@ -234,6 +234,12 @@ public:
       std::unique_ptr<Graph>& best_graph,
       std::unordered_map<Node, MachineView>& optimal_views);
   void print_cache();
+
+  void load_cache();
+
+  template<typename T>
+  void store_cache(size_t hash, T const &value);
+
 private:
   template <typename T>
   T generic_sequence_optimize(Graph const *graph,
@@ -283,6 +289,7 @@ private:
   FFModel* model;
   FFConfig const &config;
   std::unique_ptr<RecursiveLogger> logger;
+  mutable std::fstream cache_file;
 };
 
 }; // namespace FlexFlow

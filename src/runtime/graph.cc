@@ -83,19 +83,28 @@ SearchHelper::SearchHelper(FFModel *model)
 }
 
 void SearchHelper::load_cache() const {
-  this->cache_file.open("fine_grained_cache.txt", std::fstream::in);
+  this->cache_file.open("fine_grained_cache.txt", 
+                         std::fstream::in | std::fstream::out | std::fstream::app);
   if (this->cache_file.is_open()) {
     int hash;
     float cost;
     while (this->cache_file >> hash >> cost) {
-        std::cout << "hash = " << hash << ", cost = " << cost << std::endl;
+        std::cout << "Load fine-grained cache hash = " << hash << " cost = " << cost << std::endl;
+        this->cached_graph_costs[hash] = cost;
     }
-    this->cached_graph_costs[hash] = cost;
-    this->cache_file.close();
   } else {
-      std::cerr << "Unable to open file" << std::endl;
+      std::cerr << "Unable to open fine_grained_cache.txt" << std::endl;
   }
-  this->cache_file.close();
+}
+
+template <>
+void SearchHelper::store_cache(size_t hash, float const &value) const {
+  this->cached_graph_costs[hash] = value;
+}
+
+template <>
+void SearchHelper::store_cache(size_t hash, GraphCostResult const &value) const {
+  this->cached_graph_costs[hash] = value.cost;
 }
 
 template <typename T>
@@ -1474,7 +1483,7 @@ T SearchHelper::graph_cost(const Graph* graph,
   }
 
   if (!from_cache.first) {
-    cache_file << hash << " " << result << std::endl;
+    store_cache(hash, result);
   }
 
   return result;

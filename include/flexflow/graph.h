@@ -225,6 +225,9 @@ private:
 
   void load_cache() const;
 
+  template <typename T>
+  void store_cache(size_t hash, T const &value) const;
+
 private:
   FFModel *model;
 

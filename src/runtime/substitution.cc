@@ -1459,7 +1459,36 @@ GraphSearchHelper::GraphSearchHelper(FFModel *model)
   : model(model), config(model->config), cache_hit(0), cache_miss(0)
 { 
   this->logger = std::unique_ptr<RecursiveLogger>(new RecursiveLogger("gs"));
+  load_cache();
   generate_all_pcg_xfers();
+}
+
+void GraphSearchHelper::load_cache() {
+  this->cache_file.open("coarse_grained_cache.txt",
+                        std::fstream::in | std::fstream::out | std::fstream::app);
+  if (this->cache_file.is_open()) {
+    size_t hash;
+    float cost;
+    while (this->cache_file >> hash >> cost) {
+      std::cout << "Load hash: " << hash << " cost: " << cost << std::endl;
+      this->cached_optimized_graphs[hash] = cost;
+    }
+  } else {
+    std::cout << "Error in open coarse_grained_cache.txt\n";
+  }
+}
+
+template <>
+void GraphSearchHelper::store_cache(size_t hash, float const &value) {
+  this->cached_optimized_graphs[hash] = value;
+}
+
+template <>
+void GraphSearchHelper::store_cache(size_t hash, GraphCostResult const &value) {
+}
+
+template <>
+void GraphSearchHelper::store_cache(size_t hash, GraphOptimizeResult const &value) {
 }
 
 void GraphSearchHelper::print_cache() {
@@ -1599,8 +1628,6 @@ void GraphSearchHelper::graph_optimize(size_t budget,
     graph->export_strategy_computation_graph(empty_strategy, this->config.export_strategy_computation_graph_file);
   }
   
-  std::cout << "initial graph\n";
-  graph->hash();
   Node sink_node = graph->find_sink_node();
   GraphOptimizeResult optimal = this->generic_sequence_optimize<GraphOptimizeResult>(graph, sink_node, tl::nullopt/*output_shape*/, tl::nullopt/*input_shape*/);
   this->logger->debug() << "Total cache size: " << this->cached_optimized_graphs.size();
@@ -2119,6 +2146,7 @@ T GraphSearchHelper::generic_sequence_optimize(
     }
 
     this->try_cache_result<T>(hash, return_value);
+    this->store_cache(hash, return_value);
   }
   return return_value;
 }
