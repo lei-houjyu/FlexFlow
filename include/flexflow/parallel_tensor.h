@@ -84,6 +84,8 @@ struct ParallelTensorShape {
   std::unordered_map<int, int> get_tensor_dim_to_mv_dim_mapping() const;
 
   void print() const;
+
+  size_t hash() const;
 };
 
 

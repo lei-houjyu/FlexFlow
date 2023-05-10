@@ -203,6 +203,8 @@ public:
   template <typename T>
   void check_matches_graph(Graph const *, T const &, Node const &) const;
 
+  void print_cache();
+
 public:
   mutable std::unique_ptr<RecursiveLogger> logger;
   mutable std::fstream cache_file;
@@ -230,6 +232,8 @@ private:
 
 private:
   FFModel *model;
+  mutable int cache_hit;
+  mutable int cache_miss;
 
   mutable std::unordered_map<size_t, float> cached_graph_costs;
   mutable std::unordered_map<size_t, std::unique_ptr<const std::vector<MachineView>>> cached_operator_valid_views;

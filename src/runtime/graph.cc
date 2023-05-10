@@ -76,35 +76,63 @@ bool Edge::operator==(const Edge& rhs) const
 }
 
 SearchHelper::SearchHelper(FFModel *model)
-  : model(model)
+  : model(model), cache_hit(0), cache_miss(0)
 { 
   this->logger = std::unique_ptr<RecursiveLogger>(new RecursiveLogger("DP"));
   this->load_cache();
 }
 
 void SearchHelper::load_cache() const {
-  this->cache_file.open("fine_grained_cache.txt", 
-                         std::fstream::in | std::fstream::out | std::fstream::app);
+  char file_name[] = "fine_grained_cache.txt";
+
+  std::cout << "Start loading " << file_name << std::endl;
+
+  this->cache_file.open(file_name, std::fstream::in);
   if (this->cache_file.is_open()) {
-    int hash;
+    size_t hash;
     float cost;
     while (this->cache_file >> hash >> cost) {
-        std::cout << "Load fine-grained cache hash = " << hash << " cost = " << cost << std::endl;
-        this->cached_graph_costs[hash] = cost;
+        this->cached_graph_costs[hash] = (cost == -1) ? std::numeric_limits<float>::infinity() : cost;
     }
   } else {
-      std::cerr << "Unable to open fine_grained_cache.txt" << std::endl;
+      std::cerr << "Unable to open " << file_name << std::endl;
   }
+  this->cache_file.close();
+
+  std::cout << "Finish loading " << file_name << " cache size " << this->cached_graph_costs.size() << std::endl;
+
+  this->cache_file.open(file_name, std::fstream::out | std::fstream::app);
 }
 
 template <>
 void SearchHelper::store_cache(size_t hash, float const &value) const {
-  this->cached_graph_costs[hash] = value;
+  if (this->cache_file.is_open()) {
+    if (value == std::numeric_limits<float>::infinity()) {
+      this->cache_file << hash << " " << -1 << std::endl;
+    } else {
+      this->cache_file << hash << " " << value << std::endl;
+    }
+  } else {
+      std::cerr << "Unable to write fine_grained_cache.txt" << std::endl;
+  } 
 }
 
 template <>
 void SearchHelper::store_cache(size_t hash, GraphCostResult const &value) const {
-  this->cached_graph_costs[hash] = value.cost;
+  if (this->cache_file.is_open()) {
+    if (value.cost == std::numeric_limits<float>::infinity()) {
+      this->cache_file << hash << " " << -1 << std::endl;
+    } else {
+      this->cache_file << hash << " " << value.cost << std::endl;
+    }
+  } else {
+    std::cerr << "Unable to write fine_grained_cache.txt" << std::endl;
+  } 
+}
+
+void SearchHelper::print_cache() {
+  printf("[Fine-grained Cache] size: %lu hit: %d miss: %d miss_ratio: %f\n",
+    cached_graph_costs.size(), cache_hit, cache_miss, (float)cache_miss / (cache_hit + cache_miss));
 }
 
 template <typename T>
@@ -1418,25 +1446,33 @@ T SearchHelper::graph_cost(const Graph* graph,
 
   std::pair<bool, T> from_cache = this->try_get_cost_from_cache<T>(hash);
   if (from_cache.first) {
+    if (std::is_floating_point<T>::value) {
+      // std::cout << "[graph_cost] cache hit on " << hash << std::endl;
+      cache_hit++;
+    }
     // cached_graph_costs does not include sink_compute_time
     result = from_cache.second;
   } else {
-    std::cout << "cache miss\n";
-    size_t graph_hash = graph->hash();
-    if (sink.node.ptr) {
-      std::cout << std::setw(25) << "sink_node: "        << *((Op *)sink.node.ptr)     << std::endl;
-      std::cout << std::setw(25) << "sink_view: "        << sink.view                  << std::endl;
+    if (std::is_floating_point<T>::value) {
+      // std::cout << "[graph_cost] cache miss on " << hash << std::endl;
+      cache_miss++;
     }
-    if (source.node.ptr) {
-      std::cout << std::setw(25) << "source_node: "      << *((Op *)source.node.ptr)   << std::endl;
-      std::cout << std::setw(25) << "source_view: "      << source.view                << std::endl;
-    }
-    std::cout << std::setw(25) << "graph_hash: "       << graph_hash                 << std::endl;
-    std::cout << std::setw(25) << "sink_node_hash: "   << sink.node.hash()           << std::endl;
-    std::cout << std::setw(25) << "sink_view_hash: "   << sink.node.hash()           << std::endl;
-    std::cout << std::setw(25) << "source_node_hash: " << sink.node.hash()           << std::endl;
-    std::cout << std::setw(25) << "source_view_hash: " << source.view.hash()         << std::endl;
-    std::cout << std::setw(25) << "total_hash: "       << hash                       << std::endl;
+    // std::cout << "cache miss\n";
+    // size_t graph_hash = graph->hash();
+    // if (sink.node.ptr) {
+    //   std::cout << std::setw(25) << "sink_node: "        << *((Op *)sink.node.ptr)     << std::endl;
+    //   std::cout << std::setw(25) << "sink_view: "        << sink.view                  << std::endl;
+    // }
+    // if (source.node.ptr) {
+    //   std::cout << std::setw(25) << "source_node: "      << *((Op *)source.node.ptr)   << std::endl;
+    //   std::cout << std::setw(25) << "source_view: "      << source.view                << std::endl;
+    // }
+    // std::cout << std::setw(25) << "graph_hash: "       << graph_hash                 << std::endl;
+    // std::cout << std::setw(25) << "sink_node_hash: "   << sink.node.hash()           << std::endl;
+    // std::cout << std::setw(25) << "sink_view_hash: "   << sink.node.hash()           << std::endl;
+    // std::cout << std::setw(25) << "source_node_hash: " << sink.node.hash()           << std::endl;
+    // std::cout << std::setw(25) << "source_view_hash: " << source.view.hash()         << std::endl;
+    // std::cout << std::setw(25) << "total_hash: "       << hash                       << std::endl;
 
     if (graph->inEdges.size() <= 2) {
       result = this->estimate_xfer_cost<T>(graph, source, sink);
@@ -1611,14 +1647,16 @@ size_t dp_state_hash(const Graph* graph,
 {
   // std::cout << "[dp_state_hash]\n";
   size_t key = graph->hash();
+  // std::cout << "graph: " << key << std::endl;
   hash_combine(key, sink_node.hash());
   hash_combine(key, sink_view.hash());
   hash_combine(key, source_node.hash());
   hash_combine(key, resource.hash());
-  // std::cout << "sink: " << sink_node.ptr << std::endl;
+  // std::cout << "sink: " << sink_node.hash() << std::endl;
   // std::cout << "sink view: " << sink_view.hash() << std::endl;
-  // std::cout << "source: " << source_node.ptr << std::endl;
+  // std::cout << "source: " << source_node.hash() << std::endl;
   // std::cout << "source view: " << source_view.hash() << std::endl;
+  // std::cout << "total hash: " << key << std::endl;
   return key;
 }
 

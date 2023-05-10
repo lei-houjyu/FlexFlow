@@ -16,9 +16,9 @@ size_t Op::get_params_hash() const {
 
 size_t Op::hash() const {
   size_t total_hash = 0;
-  hash_combine(total_hash, op_type);
-  hash_combine(total_hash, data_type);
-  for (int i = 0; name[i] != '\0' && i < MAX_OPNAME; i++) {
+  hash_combine(total_hash, static_cast<int>(op_type));
+  // hash_combine(total_hash, static_cast<int>(data_type));
+  for (int i = 0; name[i] != '\0' && name[i] != '_' && i < MAX_OPNAME; i++) {
     hash_combine(total_hash, name[i]);
   }
   for (int i = 0; i < numInputs; i++) {

@@ -1464,23 +1464,40 @@ GraphSearchHelper::GraphSearchHelper(FFModel *model)
 }
 
 void GraphSearchHelper::load_cache() {
-  this->cache_file.open("coarse_grained_cache.txt",
-                        std::fstream::in | std::fstream::out | std::fstream::app);
+  char file_name[] = "coarse_grained_cache.txt";
+
+  std::cout << "Start loading " << file_name << std::endl;
+
+  this->cache_file.open(file_name, std::fstream::in);
+
   if (this->cache_file.is_open()) {
     size_t hash;
     float cost;
     while (this->cache_file >> hash >> cost) {
-      std::cout << "Load hash: " << hash << " cost: " << cost << std::endl;
-      this->cached_optimized_graphs[hash] = cost;
+      this->cached_optimized_graphs[hash] = (cost == -1) ? std::numeric_limits<float>::infinity() : cost;
     }
   } else {
-    std::cout << "Error in open coarse_grained_cache.txt\n";
+    std::cerr << "Error in read " << file_name << std::endl;
   }
+
+  this->cache_file.close();
+
+  std::cout << "Finish loading " << file_name << " cache size " << this->cached_optimized_graphs.size() << std::endl;
+  
+  this->cache_file.open(file_name, std::fstream::out | std::fstream::app);
 }
 
 template <>
 void GraphSearchHelper::store_cache(size_t hash, float const &value) {
-  this->cached_optimized_graphs[hash] = value;
+  if (this->cache_file.is_open()) {
+    if (value == std::numeric_limits<float>::infinity()) {
+      this->cache_file << hash << " " << -1 << std::endl;
+    } else {
+      this->cache_file << hash << " " << value << std::endl;
+    }
+  } else {
+    std::cout << "Error in write coarse_grained_cache.txt\n";
+  }
 }
 
 template <>
@@ -1492,7 +1509,7 @@ void GraphSearchHelper::store_cache(size_t hash, GraphOptimizeResult const &valu
 }
 
 void GraphSearchHelper::print_cache() {
-  printf("[Fine-grained Cache] size: %lu hit: %d miss: %d miss_ratio: %f\n",
+  printf("[Coarse-grained Cache] size: %lu hit: %d miss: %d miss_ratio: %f\n",
     cached_optimized_graphs.size(), cache_hit, cache_miss, (float)cache_miss / (cache_hit + cache_miss));
 }
 
@@ -1633,8 +1650,11 @@ void GraphSearchHelper::graph_optimize(size_t budget,
   this->logger->debug() << "Total cache size: " << this->cached_optimized_graphs.size();
   std::cout << "Optimal cost: " << optimal.cost << std::endl;
   std::cout << "Max budget: " << this->model->config.max_budget << std::endl;
-  exit(0);
+  this->cache_file.close();
   graph->search->cache_file.close();
+  this->print_cache();
+  graph->search->print_cache();
+  exit(0);
   SimplificationSettings settings;
   settings.fuse_parallel_ops = true;
   settings.remove_noops = true;
@@ -1902,17 +1922,25 @@ size_t gs_dp_state_hash(Graph const *graph,
   // printf("[gs_dp_state_hash]\n");
   size_t key = graph->hash();
   hash_combine(key, sink_node.hash());
-  hash_combine(key, output_shape);
-  hash_combine(key, input_shape);
-  // printf("sink_node %s %zu\n", sink_node.to_string().c_str(), sink_node.hash());
-  // printf("output shape: \n");
-  // if (output_shape.has_value()) {
-  //   output_shape.value().print();
-  // }
-  // printf("input shape: \n");
-  // if (input_shape.has_value()) {
-  //   input_shape.value().print();
-  // }
+
+  if (output_shape.has_value()) {
+    hash_combine(key, output_shape.value().hash());
+    // printf("output_shape: %zu\n", output_shape.value().hash());
+    // output_shape.value().print();
+  } else {
+    hash_combine(key, 0);
+    // printf("output_shape: 0\n");
+  }
+
+  if (input_shape.has_value()) {
+    hash_combine(key, input_shape.value().hash());
+    // printf("input_shape: %zu\n", input_shape.value().hash());
+    // input_shape.value().print();
+  } else {
+    hash_combine(key, 0);
+    // printf("input_shape: 0\n");
+  }
+  // printf("key: %zu\n", key);
   return key;
 }
 
@@ -2005,6 +2033,9 @@ T GraphSearchHelper::generic_sequence_optimize(
   size_t hash = gs_dp_state_hash(graph, sink_node, output_shape, input_shape);
   tl::optional<T> cached = this->try_get_cost_from_cache<T>(hash);
   if (cached.has_value()) {
+    if (std::is_floating_point<T>::value) {
+      cache_hit++;
+    }
     this->logger->spew() << "Optimizing graph with " << graph->inEdges.size() << " nodes";
     {
       TAG_ENTER(this->logger);
@@ -2018,6 +2049,11 @@ T GraphSearchHelper::generic_sequence_optimize(
 
     /* this->logger->check_same_as(starting_depth); */
     return cached.value();
+  } else {
+    if (std::is_floating_point<T>::value) {
+      cache_miss++;
+    }
+    // std::cout << "cache miss on " << hash << " " << typeid(T).name() << std::endl;
   }
 
   this->logger->debug() << "Optimizing graph with " << graph->inEdges.size() << " nodes";
